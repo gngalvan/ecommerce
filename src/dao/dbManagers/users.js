@@ -7,7 +7,6 @@ import {
 } from "../../utils/utils.js";
 import ManagerDb from "./managerDb.js";
 
-
 export default class Users extends ManagerDb {
   constructor() {
     super(usersModel)

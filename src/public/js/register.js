@@ -1,6 +1,5 @@
 const registerForm = document.getElementById('register');
 
-
 registerForm.addEventListener('submit',async (e)=>{
     e.preventDefault();
 

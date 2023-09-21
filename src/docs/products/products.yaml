@@ -126,13 +126,12 @@ components:
   examples:
     example:
       value:
-        title: "Remera Adidas"
-        description: "Remera deportiva de alta calidad"
-        code: "ADIDAS014"
+        title: "Remera Eva"
+        description: "Remera anime"
+        code: "EVA0001"
         price: 35
         stock: 4140
         category: "Deportes"
         thumbnails:
-          - "https://sporting.vtexassets.com/arquivos/ids/197609-1200-1200?v=637105595749470000&width=1200&height=1200&aspect=true"
           - "ruta/imagen29.jpg"
           - "ruta/imagen30.jpg"
