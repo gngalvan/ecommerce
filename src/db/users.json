@@ -1,0 +1,16 @@
+[
+    {
+        "_id": {
+          "$oid": "648f907e5d0d3c9ac078c59c"
+        },
+        "email": "martinneme@outlook.com",
+        "password": "$2b$10$FsHemHP7iBv4dgX1SkOOUOBFvx9awZHKS1Vn9fbtW0AfEyqfXvvYu",
+        "firstName": "Martin",
+        "lastName": "Neme",
+        "role": "USER",
+        "timestamp": {
+          "$date": "2023-06-18T23:17:18.888Z"
+        },
+        "__v": 0
+      }
+]

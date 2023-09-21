@@ -1,0 +1,21 @@
+<div id="profile-container">
+  <div id="profile-header" class="TitleProds">
+    <h1 id="profile-title" class="titleSection">PROFILE</h1>
+    <p id="username">username: {{user.username}}</p>
+    <p id="email">Email: {{user.email}}</p>
+    <p id="admin">Role: {{user.role}}</p>
+  </div>
+  <nav id="profile-navigation" name="paginado">
+    <div id="back-button">
+      <button ><a href="/products">Products</a></button>
+    </div>
+       <div id="back-button">
+      <button ><a href="/admin/console/users/">Admin users</a></button>
+      <button ><a href="/admin/console/products/">Admin products</a></button>
+    </div>
+     <div id="back-button">
+    <button id="logout" onclick="logout()" >Logout</button>
+    </div>
+  </nav>
+</div>
+<script src="/js/profile.js"></script>

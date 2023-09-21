@@ -1,0 +1,259 @@
+paths:
+  /carts/{id}:
+    get:
+      summary: Obtener un carrito por ID
+      tags:
+        - Carritos
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del carrito a obtener
+          schema:
+            type: string
+        - name: cookie
+          in: header
+          required: true
+          description: Autenticación
+      responses:
+        '200':
+          description: Respuesta exitosa
+          content:
+              application/json:
+                example:
+                  id: ObjectId('64a097220060b753f713a69s')
+                  products:
+                    - product: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+                      quantity: 0
+                      id: "64a0bc83bd079a3644bda63a" 
+    delete:
+      summary: Eliminar un carrito por ID
+      tags:
+        - Carritos
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del carrito a eliminar
+          schema:
+            type: string
+        - name: cookie
+          in: header
+          required: true
+          description: Autenticación
+      responses:
+        '200':
+          description: Respuesta exitosa
+          content:
+              application/json:
+                example:
+                  status: "success"
+                  payload: 1
+  /carts:
+    post:
+      summary: Crear un nuevo carrito
+      tags:
+        - Carritos
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                products:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      product:
+                        type: string
+                        format: uuid
+                      quantity:
+                        type: number
+      parameters:
+        - name: cookie
+          in: header
+          required: true
+          description: Autenticación
+      responses:
+        '200':
+          description: Respuesta exitosa
+          content:
+              application/json:
+                example:
+                  status: "success"
+                  payload: "64dd9dc8fc4c86f8f7d113ad"
+
+  /carts/{id}/products/{idprod}:
+    post:
+      summary: Agregar un producto al carrito por ID
+      tags:
+        - Carritos
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del carrito
+          schema:
+            type: string
+        - name: idprod
+          in: path
+          required: true
+          description: ID del producto a agregar
+          schema:
+            type: string
+        - name: cookie
+          in: header
+          required: true
+          description: Autenticación
+      responses:
+        '200':
+          description: Respuesta exitosa
+          content:
+              application/json:
+                example:
+                  status: "success"
+                  payload: 1
+
+  /carts/{cid}/purchase:
+    post:
+      summary: Crear una nueva compra desde el carrito
+      tags:
+        - Carritos
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: ID del carrito
+          schema:
+            type: string
+        - name: cookie
+          in: header
+          required: true
+          description: Autenticación
+      responses:
+        '200':
+          description: Respuesta exitosa
+          content:
+              application/json:
+                example:
+                  status: "success"
+                  payload:
+                    purchase:
+                      code: "$2b$10$C8WWbMGQjw2PQRFjPG5kIORZLeFImWCfnmGqQKTToJj2SsSAZfLsa"
+                      amount: 60
+                      purchaser: "martinneme@gmail.com"
+                      _id: "64dd9e2bfc4c86f8f7d113b7"
+                      purchase_datetime: "2023-08-17T04:12:27.806Z"
+                      __v: 0
+                    productsAccepted:
+                      title: "remera"
+                      price: 34
+                      quantity: 2
+                    productsRejected:
+                      title: "remera"
+                      price: 34
+                      quantity: 2
+
+
+  /carts/{id}/update/products/{idprod}:
+    put:
+      summary: Actualizar la cantidad de un producto en el carrito por ID
+      tags:
+        - Carritos
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del carrito
+          schema:
+            type: string
+        - name: idprod
+          in: path
+          required: true
+          description: ID del producto en el carrito a actualizar
+          schema:
+            type: string
+        - name: cookie
+          in: header
+          required: true
+          description: Autenticación
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                quantity:
+                  type: number
+      responses:
+        '200':
+          description: Respuesta exitosa
+          content:
+              application/json:
+                example:
+                  status: "success"
+
+  /carts/{id}/product/{pid}:
+    delete:
+      summary: Eliminar un producto del carrito por ID
+      tags:
+        - Carritos
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del carrito
+          schema:
+            type: string
+        - name: pid
+          in: path
+          required: true
+          description: ID del producto en el carrito a eliminar
+          schema:
+            type: string
+        - name: cookie
+          in: header
+          required: true
+          description: Autenticación
+      responses:
+        '200':
+          description: Respuesta exitosa
+          content:
+              application/json:
+                example:
+                  status: "success"
+                  payload: 1
+components:
+  schemas:
+    ProductToCart:
+      type: object
+      properties:
+        product:
+          type: string
+          format: uuid
+        quantity:
+          type: number
+    cart:
+      type: object
+      properties:
+          _id:
+            type: string
+            format: uuid
+          products: 
+            type: array
+            product:
+              type: string
+            quantity:
+              type: number
+            id:
+              type: string
+
+  examples:
+    cart:
+      value:
+        products:
+          - product: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+            quantity: 0

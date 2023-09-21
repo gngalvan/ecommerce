@@ -1,0 +1,150 @@
+{"level":"info","message":"ENVIROMENT: Production"}
+{"level":"info","message":"Persistence: MongoDB"}
+{"level":"info","message":"DB connected to MongoDB"}
+{"level":"info","message":"Express Server listening on PORT 8080"}
+{"level":"info","message":"GET en /login - 2023-08-29T23:13:49.576Z"}
+{"level":"info","message":"GET en /style.css - 2023-08-29T23:13:49.704Z"}
+{"level":"info","message":"GET en /js/login.js - 2023-08-29T23:13:49.710Z"}
+{"level":"info","message":"POST en /api/login - 2023-08-29T23:13:54.654Z"}
+{"level":"error","message":"Error: User or Password invalid"}
+{"level":"info","message":"POST en /api/login - 2023-08-29T23:14:02.761Z"}
+{"level":"info","message":"GET en /products - 2023-08-29T23:14:03.306Z"}
+{"level":"info","message":"GET en /products/ - 2023-08-29T23:14:03.319Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-08-29T23:14:04.459Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-08-29T23:14:04.475Z"}
+{"level":"info","message":"GET en /carts/0 - 2023-08-29T23:14:05.341Z"}
+{"level":"error","message":"ReferenceError: logger is not defined"}
+{"level":"info","message":"GET en / - 2023-08-29T23:14:13.166Z"}
+{"level":"info","message":"GET en /js/profile.js - 2023-08-29T23:14:13.237Z"}
+{"level":"info","message":"GET en /style.css - 2023-08-29T23:14:13.241Z"}
+{"level":"info","message":"GET en /products/ - 2023-08-29T23:14:16.402Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-08-29T23:14:16.671Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-08-29T23:14:16.677Z"}
+{"level":"info","message":"GET en /carts/0 - 2023-08-29T23:14:16.706Z"}
+{"level":"error","message":"ReferenceError: logger is not defined"}
+{"level":"info","message":"POST en /carts/ - 2023-08-29T23:14:25.393Z"}
+{"level":"info","message":"POST en /carts/64ee7bd14a1b86948bf010df/products/645c260c46c5826efed9a561 - 2023-08-29T23:14:25.641Z"}
+{"level":"info","message":"GET en /carts/64ee7bd14a1b86948bf010df - 2023-08-29T23:14:27.462Z"}
+{"level":"info","message":"GET en /carts/style.css - 2023-08-29T23:14:27.911Z"}
+{"level":"info","message":"GET en /js/cart.js - 2023-08-29T23:14:27.928Z"}
+{"level":"info","message":"POST en /carts/64ee7bd14a1b86948bf010df/purchase - 2023-08-29T23:14:35.023Z"}
+{"level":"info","message":"GET en /carts/64ee7bd14a1b86948bf010df - 2023-08-29T23:14:54.662Z"}
+{"level":"info","message":"GET en /carts/style.css - 2023-08-29T23:14:54.905Z"}
+{"level":"info","message":"GET en /js/cart.js - 2023-08-29T23:14:54.908Z"}
+{"level":"info","message":"GET en /api/logout - 2023-08-29T23:15:17.279Z"}
+{"level":"info","message":"GET en /login - 2023-08-29T23:15:17.304Z"}
+{"level":"info","message":"GET en /style.css - 2023-08-29T23:15:17.359Z"}
+{"level":"info","message":"GET en /js/login.js - 2023-08-29T23:15:17.361Z"}
+{"level":"info","message":"GET en /reset-password - 2023-08-29T23:15:19.477Z"}
+{"level":"info","message":"GET en /style.css - 2023-08-29T23:15:19.529Z"}
+{"level":"info","message":"GET en /js/resetPassword.js - 2023-08-29T23:15:19.540Z"}
+{"level":"info","message":"GET en /api/logout - 2023-08-29T23:16:53.982Z"}
+{"level":"info","message":"GET en /api/logout - 2023-08-29T23:17:03.423Z"}
+{"level":"info","message":"GET en /api/logout - 2023-08-29T23:17:03.965Z"}
+{"level":"info","message":"GET en /api/logout - 2023-08-29T23:17:05.231Z"}
+{"level":"info","message":"GET en /products/ - 2023-08-29T23:17:07.435Z"}
+{"level":"info","message":"GET en /login - 2023-08-29T23:17:11.106Z"}
+{"level":"info","message":"GET en /style.css - 2023-08-29T23:17:11.149Z"}
+{"level":"info","message":"GET en /js/login.js - 2023-08-29T23:17:11.150Z"}
+{"level":"info","message":"POST en /api/login - 2023-08-29T23:17:18.115Z"}
+{"level":"info","message":"GET en /products/ - 2023-08-29T23:17:18.621Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-08-29T23:17:18.874Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-08-29T23:17:18.876Z"}
+{"level":"info","message":"GET en /carts/0 - 2023-08-29T23:17:18.949Z"}
+{"level":"error","message":"ReferenceError: logger is not defined"}
+{"level":"info","message":"GET en / - 2023-08-29T23:17:20.402Z"}
+{"level":"info","message":"GET en /style.css - 2023-08-29T23:17:20.458Z"}
+{"level":"info","message":"GET en /js/profile.js - 2023-08-29T23:17:20.461Z"}
+{"level":"info","message":"GET en /admin/console/users/ - 2023-08-29T23:17:22.697Z"}
+{"level":"info","message":"GET en /admin/console/users/style.css - 2023-08-29T23:17:22.926Z"}
+{"level":"info","message":"GET en /js/adminUsers.js - 2023-08-29T23:17:22.934Z"}
+{"level":"info","message":"GET en /admin/console/products/ - 2023-08-29T23:17:40.321Z"}
+{"level":"info","message":"GET en /admin/console/products/style.css - 2023-08-29T23:17:40.568Z"}
+{"level":"info","message":"GET en /js/adminProducts.js - 2023-08-29T23:17:40.570Z"}
+{"level":"info","message":"GET en /products/ - 2023-08-29T23:44:38.639Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-08-29T23:44:38.875Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-08-29T23:44:38.899Z"}
+{"level":"info","message":"GET en /carts/0 - 2023-08-29T23:44:38.985Z"}
+{"level":"error","message":"ReferenceError: logger is not defined"}
+{"level":"info","message":"GET en /products?page=2 - 2023-08-29T23:44:45.674Z"}
+{"level":"info","message":"GET en /products/?page=2 - 2023-08-29T23:44:45.685Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-08-29T23:44:47.053Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-08-29T23:44:47.058Z"}
+{"level":"info","message":"GET en /carts/0 - 2023-08-29T23:44:47.104Z"}
+{"level":"error","message":"ReferenceError: logger is not defined"}
+{"level":"info","message":"GET en / - 2023-08-29T23:44:49.793Z"}
+{"level":"info","message":"GET en /style.css - 2023-08-29T23:44:49.885Z"}
+{"level":"info","message":"GET en /js/profile.js - 2023-08-29T23:44:49.888Z"}
+{"level":"info","message":"GET en /admin/console/users/ - 2023-08-29T23:44:54.197Z"}
+{"level":"info","message":"GET en /admin/console/users/style.css - 2023-08-29T23:44:54.457Z"}
+{"level":"info","message":"GET en /js/adminUsers.js - 2023-08-29T23:44:54.458Z"}
+{"level":"info","message":"ENVIROMENT: Production"}
+{"level":"info","message":"Persistence: MongoDB"}
+{"level":"info","message":"DB connected to MongoDB"}
+{"level":"info","message":"Express Server listening on PORT 8080"}
+{"level":"info","message":"ENVIROMENT: Production"}
+{"level":"info","message":"Persistence: MongoDB"}
+{"level":"info","message":"DB connected to MongoDB"}
+{"level":"info","message":"Express Server listening on PORT 8080"}
+{"level":"info","message":"GET en / - 2023-09-19T19:21:28.239Z"}
+{"level":"info","message":"GET en /login - 2023-09-19T19:21:28.261Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-19T19:21:28.353Z"}
+{"level":"info","message":"GET en /js/login.js - 2023-09-19T19:21:28.357Z"}
+{"level":"info","message":"GET en /favicon.ico - 2023-09-19T19:21:28.496Z"}
+{"level":"info","message":"POST en /api/login - 2023-09-19T19:21:41.876Z"}
+{"level":"info","message":"GET en /products - 2023-09-19T19:21:42.405Z"}
+{"level":"info","message":"GET en /products/ - 2023-09-19T19:21:42.422Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-09-19T19:21:42.647Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-09-19T19:21:42.666Z"}
+{"level":"info","message":"GET en /carts/0 - 2023-09-19T19:21:43.067Z"}
+{"level":"error","message":"ReferenceError: logger is not defined"}
+{"level":"info","message":"GET en / - 2023-09-19T19:22:16.379Z"}
+{"level":"info","message":"GET en /js/profile.js - 2023-09-19T19:22:16.429Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-19T19:22:16.431Z"}
+{"level":"info","message":"GET en /admin/console/products/ - 2023-09-19T19:22:17.759Z"}
+{"level":"info","message":"GET en /admin/console/products/style.css - 2023-09-19T19:22:17.955Z"}
+{"level":"info","message":"GET en /js/adminProducts.js - 2023-09-19T19:22:17.957Z"}
+{"level":"info","message":"DELETE en /products/646842eb3d1c8cd60b5ec42d - 2023-09-19T19:22:19.773Z"}
+{"level":"error","message":"ReferenceError: logger is not defined"}
+{"level":"info","message":"GET en /admin/console/products/ - 2023-09-19T19:22:22.225Z"}
+{"level":"info","message":"GET en /admin/console/products/style.css - 2023-09-19T19:22:22.444Z"}
+{"level":"info","message":"GET en /js/adminProducts.js - 2023-09-19T19:22:22.451Z"}
+{"level":"info","message":"GET en /admin/console/products/style.css - 2023-09-19T19:22:26.299Z"}
+{"level":"info","message":"DELETE en /products/646842eb3d1c8cd60b5ec42d - 2023-09-19T19:22:39.276Z"}
+{"level":"error","message":"ReferenceError: logger is not defined"}
+{"level":"info","message":"ENVIROMENT: Production"}
+{"level":"info","message":"Persistence: MongoDB"}
+{"level":"info","message":"DB connected to MongoDB"}
+{"level":"info","message":"Express Server listening on PORT 8080"}
+{"level":"info","message":"GET en /admin/console/products/ - 2023-09-19T19:23:48.179Z"}
+{"level":"info","message":"GET en /admin/console/products/style.css - 2023-09-19T19:23:48.486Z"}
+{"level":"info","message":"GET en /js/adminProducts.js - 2023-09-19T19:23:48.490Z"}
+{"level":"info","message":"DELETE en /products/646842eb3d1c8cd60b5ec42d - 2023-09-19T19:23:54.052Z"}
+{"level":"error","message":"ReferenceError: logger is not defined"}
+{"level":"info","message":"ENVIROMENT: Production"}
+{"level":"info","message":"Persistence: MongoDB"}
+{"level":"info","message":"DB connected to MongoDB"}
+{"level":"info","message":"Express Server listening on PORT 8080"}
+{"level":"info","message":"GET en /admin/console/products/ - 2023-09-19T19:24:30.266Z"}
+{"level":"info","message":"GET en /admin/console/products/style.css - 2023-09-19T19:24:30.737Z"}
+{"level":"info","message":"GET en /js/adminProducts.js - 2023-09-19T19:24:30.745Z"}
+{"level":"info","message":"DELETE en /products/646842eb3d1c8cd60b5ec42d - 2023-09-19T19:24:32.715Z"}
+{"level":"error","message":"ReferenceError: logger is not defined"}
+{"level":"info","message":"ENVIROMENT: Production"}
+{"level":"info","message":"Persistence: MongoDB"}
+{"level":"info","message":"DB connected to MongoDB"}
+{"level":"info","message":"Express Server listening on PORT 8080"}
+{"level":"info","message":"GET en /admin/console/products/ - 2023-09-19T19:25:41.514Z"}
+{"level":"info","message":"GET en /admin/console/products/style.css - 2023-09-19T19:25:41.751Z"}
+{"level":"info","message":"GET en /js/adminProducts.js - 2023-09-19T19:25:41.771Z"}
+{"level":"info","message":"DELETE en /products/646842eb3d1c8cd60b5ec42d - 2023-09-19T19:25:43.875Z"}
+{"level":"error","message":"ReferenceError: logger is not defined"}
+{"level":"info","message":"ENVIROMENT: Production"}
+{"level":"info","message":"Persistence: MongoDB"}
+{"level":"info","message":"DB connected to MongoDB"}
+{"level":"info","message":"Express Server listening on PORT 8080"}
+{"level":"info","message":"GET en /admin/console/products/ - 2023-09-19T19:26:13.480Z"}
+{"level":"info","message":"GET en /admin/console/products/style.css - 2023-09-19T19:26:13.734Z"}
+{"level":"info","message":"GET en /js/adminProducts.js - 2023-09-19T19:26:13.744Z"}
+{"level":"info","message":"DELETE en /products/646842eb3d1c8cd60b5ec42d - 2023-09-19T19:26:15.274Z"}
+{"level":"error","message":"ReferenceError: logger is not defined"}

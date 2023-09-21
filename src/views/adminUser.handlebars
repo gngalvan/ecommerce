@@ -1,0 +1,60 @@
+<div>
+  <div id="profile-header">
+    <h1 id="profile-title" class="titleSection">ADMINISTRADOR DE USUARIOS</h1>
+    <div>
+      <button class="deleteBtn" onclick="deleteUsersInfrequent()">Limpiar
+        usuarios inactivos</button>
+    </div>
+  </div>
+  <div class="cartView">
+    <table>
+      <tr>
+        <th class="titleTable">USERNAME</th>
+        <th class="titleTable">EMAIL</th>
+        <th class="titleTable">ROL</th>
+        <th class="titleTable">CAMBIAR ROL</th>
+        <th class="titleTable"> DELETE</th>
+      </tr>
+    </table>
+    <ul class="cards adminuser" id="cards">
+      {{#each users}}
+
+        <li class="productCart usersList">
+          <div>
+            {{this.username}}
+          </div>
+          <div>
+            {{this.email}}
+          </div>
+          <div id="role">
+            {{this.rol}}
+          </div>
+          <div>
+            <select id="opcionRolSelect">
+              <option value="USER">USER</option>
+              <option value="ADMIN">ADMIN</option>
+              <option value="PREMIUM">PREMIUM</option>
+            </select>
+         <button id="cambiarRol" onclick="changeRol(this)">Aplicar </button>
+          </div>
+          <div>
+            <button class="deleteBtn" onclick="deleteItemUser(this)">X</button>
+            <div hidden id="idItem">{{this.id}}</div>
+          </div>
+
+        </li>
+
+      {{/each}}
+    </ul>
+  </div>
+  <nav id="profile-navigation" name="paginado">
+
+    <div id="back-button">
+      <button><a href="/products">Products</a></button>
+    </div>
+    <div id="back-button">
+      <button id="logout" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+</div>
+<script src="/js/adminUsers.js"></script>

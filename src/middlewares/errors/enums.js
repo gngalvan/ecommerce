@@ -1,0 +1,11 @@
+const EnumsErrors={
+    ROUTING_ERROR:1,
+    INVALID_TYPE_ERROR:2,
+    USER_NOT_FOUND:3,
+    DATABASE_ERROR:4,
+    PROPERTIES_ERROR:5,
+    USER_EXIST:6,
+    INVALID_CREDENTIALS:7
+}
+
+export default EnumsErrors;

@@ -1,0 +1,64 @@
+<div>
+  <div id="profile-header">
+    <h1 id="profile-title" class="titleSection">Administrador de productos</h1>
+  <nav> 
+    <div id="back-button">
+      <button><a href="/products">Products</a></button>
+    </div>
+    <div id="back-button">
+      <button id="logout" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+  </div>
+  <div class="cartView">
+    <table>
+      <tr>
+        <th class="titleTable">PRODUCT</th>
+        <th class="titleTable">STOCK</th>
+        <th class="titleTable"> DELETE</th>
+      </tr>
+    </table>
+    <ul class="cards adminuser" id="cards">
+      {{#each products.products}}
+
+        <li class="productCart">
+          <div>
+            {{this.title}}
+          </div>
+          <div>
+            {{this.stock}}
+          </div>
+          <div>
+            <button class="deleteBtn" onclick="deleteProduct(this)">X</button>
+            <div hidden id="idItem">{{this._id}}</div>
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  <nav id="profile-navigation" name="paginado">
+<div class="formulario">
+          <form class="form-group"  target="noredirect" id="send">
+            title:
+            <input type="text" name="title" id="title"/>
+            description:
+            <input type="text" name="description" id="description"/>
+            Link:
+            <input type="text" name="thumbnails" id="thumbnails"/>
+            code:
+            <input type="text" name="code" id="code"/>
+            category:
+            <input type="text" name="category" id="category"/>
+            stock
+            <input type="text" name="stock" id="stock"/>
+            price:
+            <input type="text" name="price" id="price"/>
+            status:
+            <input type="checkbox" name="status" id="status" value="false" >
+            <button type="submit">Agregar</button>
+          </form>
+           <label id="panelAddProd" style="color:brown" for="panel"></label>
+</div>
+
+</div>
+<script src="/js/adminProducts.js"></script>

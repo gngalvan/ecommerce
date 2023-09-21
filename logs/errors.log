@@ -1,0 +1,207 @@
+{"level":"info","message":"ENVIROMENT: Production"}
+{"level":"info","message":"Persistence: MongoDB"}
+{"level":"info","message":"DB connected to MongoDB"}
+{"level":"info","message":"Express Server listening on PORT 8080"}
+{"level":"info","message":"GET en /login - 2023-09-13T22:50:46.919Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T22:50:47.033Z"}
+{"level":"info","message":"GET en /js/login.js - 2023-09-13T22:50:47.046Z"}
+{"level":"info","message":"GET en / - 2023-09-13T22:50:53.757Z"}
+{"level":"info","message":"GET en /api/docs/ - 2023-09-13T22:50:57.638Z"}
+{"level":"info","message":"GET en /api/docs/swagger-ui.css - 2023-09-13T22:50:57.673Z"}
+{"level":"info","message":"GET en /api/docs/swagger-ui-bundle.js - 2023-09-13T22:50:57.683Z"}
+{"level":"info","message":"GET en /api/docs/swagger-ui-standalone-preset.js - 2023-09-13T22:50:57.692Z"}
+{"level":"info","message":"GET en /api/docs/swagger-ui-init.js - 2023-09-13T22:50:57.696Z"}
+{"level":"info","message":"GET en /api/docs/favicon-32x32.png - 2023-09-13T22:50:58.358Z"}
+{"level":"info","message":"GET en /password-reset/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0OGY5MDdlNWQwZDNjOWFjMDc4YzU5YyIsImVtYWlsIjoibWFydGlubmVtZUBvdXRsb29rLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJERyZk5ydWhGZ0V4OEZkUE9pYUE2TWVjd1JEMTlubDJyVXlHLkM2dXRiV1l6V0JHdHpxSG5DIiwiZmlyc3ROYW1lIjoiTWFydGluIiwibGFzdE5hbWUiOiJOZW1lIiwicm9sZSI6IlVTRVIiLCJ0aW1lc3RhbXAiOiIyMDIzLTA2LTE4VDIzOjE3OjE4Ljg4OFoiLCJfX3YiOjAsImxhc3RDb25uZWN0aW9uIjoiMjAyMy0wOC0yOVQyMzoxNDowMy4wMzFaIn0sImlhdCI6MTY5NDY0NzA0MiwiZXhwIjoxNjk0NjUwNjQyfQ._aPyHX6_sLqY9WbrqUqywUFNi4ljhB1TgALmwSi-8gk - 2023-09-13T23:17:56.789Z"}
+{"level":"info","message":"GET en /password-reset/style.css - 2023-09-13T23:17:56.850Z"}
+{"level":"info","message":"GET en /js/setNewPasswordReset.js - 2023-09-13T23:17:56.862Z"}
+{"level":"info","message":"PUT en /api/user/update/password - 2023-09-13T23:18:04.684Z"}
+{"level":"info","message":"GET en /api/logout - 2023-09-13T23:18:05.433Z"}
+{"level":"info","message":"GET en /login - 2023-09-13T23:18:05.493Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T23:18:05.530Z"}
+{"level":"info","message":"GET en /js/login.js - 2023-09-13T23:18:05.533Z"}
+{"level":"info","message":"POST en /api/login - 2023-09-13T23:18:14.717Z"}
+{"level":"info","message":"GET en /products - 2023-09-13T23:18:15.189Z"}
+{"level":"info","message":"GET en /products/ - 2023-09-13T23:18:15.208Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-09-13T23:18:15.473Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-09-13T23:18:15.491Z"}
+{"level":"info","message":"GET en /carts/0 - 2023-09-13T23:18:15.757Z"}
+{"level":"error","message":"ReferenceError: logger is not defined"}
+{"level":"info","message":"POST en /carts/ - 2023-09-13T23:18:18.902Z"}
+{"level":"info","message":"POST en /carts/6502433ab07c28828e6c8bb0/products/645c260c46c5826efed9a561 - 2023-09-13T23:18:19.091Z"}
+{"level":"info","message":"GET en /carts/6502433ab07c28828e6c8bb0 - 2023-09-13T23:18:20.439Z"}
+{"level":"info","message":"GET en /carts/style.css - 2023-09-13T23:18:20.789Z"}
+{"level":"info","message":"GET en /js/cart.js - 2023-09-13T23:18:20.791Z"}
+{"level":"info","message":"POST en /carts/6502433ab07c28828e6c8bb0/purchase - 2023-09-13T23:18:30.887Z"}
+{"level":"info","message":"POST en /carts/6502433ab07c28828e6c8bb0/purchase - 2023-09-13T23:18:34.134Z"}
+{"level":"info","message":"GET en /carts/6502433ab07c28828e6c8bb0 - 2023-09-13T23:18:49.521Z"}
+{"level":"info","message":"GET en /carts/style.css - 2023-09-13T23:18:49.744Z"}
+{"level":"info","message":"GET en /js/cart.js - 2023-09-13T23:18:49.746Z"}
+{"level":"info","message":"GET en /products/ - 2023-09-13T23:19:22.825Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-09-13T23:19:23.074Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-09-13T23:19:23.078Z"}
+{"level":"info","message":"GET en /carts/6502433ab07c28828e6c8bb0 - 2023-09-13T23:19:23.113Z"}
+{"level":"info","message":"GET en / - 2023-09-13T23:19:25.814Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T23:19:25.853Z"}
+{"level":"info","message":"GET en /js/profile.js - 2023-09-13T23:19:25.855Z"}
+{"level":"info","message":"GET en /admin/console/products/ - 2023-09-13T23:19:27.206Z"}
+{"level":"info","message":"GET en /admin/console/users/ - 2023-09-13T23:19:30.206Z"}
+{"level":"info","message":"GET en /products/ - 2023-09-13T23:19:36.723Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-09-13T23:19:36.956Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-09-13T23:19:36.959Z"}
+{"level":"info","message":"GET en /carts/6502433ab07c28828e6c8bb0 - 2023-09-13T23:19:37.025Z"}
+{"level":"info","message":"GET en /products?page=2 - 2023-09-13T23:19:40.201Z"}
+{"level":"info","message":"GET en /products/?page=2 - 2023-09-13T23:19:40.210Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-09-13T23:19:40.445Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-09-13T23:19:40.458Z"}
+{"level":"info","message":"GET en /carts/6502433ab07c28828e6c8bb0 - 2023-09-13T23:19:40.506Z"}
+{"level":"info","message":"GET en /api/logout - 2023-09-13T23:19:44.600Z"}
+{"level":"info","message":"GET en /login - 2023-09-13T23:19:44.616Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T23:19:44.644Z"}
+{"level":"info","message":"GET en /js/login.js - 2023-09-13T23:19:44.651Z"}
+{"level":"info","message":"POST en /api/login - 2023-09-13T23:19:52.949Z"}
+{"level":"info","message":"GET en /products/ - 2023-09-13T23:19:53.439Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-09-13T23:19:53.687Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-09-13T23:19:53.692Z"}
+{"level":"info","message":"GET en /carts/0 - 2023-09-13T23:19:53.710Z"}
+{"level":"error","message":"ReferenceError: logger is not defined"}
+{"level":"info","message":"GET en / - 2023-09-13T23:19:58.005Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T23:19:58.038Z"}
+{"level":"info","message":"GET en /js/profile.js - 2023-09-13T23:19:58.040Z"}
+{"level":"info","message":"GET en /admin/console/products/ - 2023-09-13T23:20:48.093Z"}
+{"level":"info","message":"GET en /admin/console/products/style.css - 2023-09-13T23:20:48.302Z"}
+{"level":"info","message":"GET en /js/adminProducts.js - 2023-09-13T23:20:48.321Z"}
+{"level":"info","message":"GET en /products/ - 2023-09-13T23:21:07.154Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-09-13T23:21:07.396Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-09-13T23:21:07.398Z"}
+{"level":"info","message":"GET en /carts/0 - 2023-09-13T23:21:07.464Z"}
+{"level":"error","message":"ReferenceError: logger is not defined"}
+{"level":"info","message":"GET en / - 2023-09-13T23:21:09.093Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T23:21:09.138Z"}
+{"level":"info","message":"GET en /js/profile.js - 2023-09-13T23:21:09.143Z"}
+{"level":"info","message":"GET en /admin/console/users/ - 2023-09-13T23:21:10.157Z"}
+{"level":"info","message":"ENVIROMENT: Production"}
+{"level":"info","message":"Persistence: MongoDB"}
+{"level":"info","message":"DB connected to MongoDB"}
+{"level":"info","message":"Express Server listening on PORT 8080"}
+{"level":"info","message":"GET en / - 2023-09-13T23:46:47.242Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T23:46:47.392Z"}
+{"level":"info","message":"GET en /js/profile.js - 2023-09-13T23:46:47.409Z"}
+{"level":"info","message":"GET en / - 2023-09-13T23:46:56.260Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T23:46:56.324Z"}
+{"level":"info","message":"GET en /js/profile.js - 2023-09-13T23:46:56.327Z"}
+{"level":"info","message":"GET en /favicon.ico - 2023-09-13T23:46:56.363Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T23:46:59.281Z"}
+{"level":"info","message":"GET en / - 2023-09-13T23:47:06.006Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T23:47:06.072Z"}
+{"level":"info","message":"GET en /js/profile.js - 2023-09-13T23:47:06.075Z"}
+{"level":"info","message":"GET en /api/logout - 2023-09-13T23:47:07.398Z"}
+{"level":"info","message":"GET en /login - 2023-09-13T23:47:07.419Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T23:47:07.506Z"}
+{"level":"info","message":"GET en /js/login.js - 2023-09-13T23:47:07.509Z"}
+{"level":"info","message":"GET en / - 2023-09-13T23:47:12.772Z"}
+{"level":"info","message":"ENVIROMENT: Production"}
+{"level":"info","message":"Persistence: MongoDB"}
+{"level":"info","message":"DB connected to MongoDB"}
+{"level":"info","message":"Express Server listening on PORT 8080"}
+{"level":"info","message":"GET en / - 2023-09-13T23:47:55.557Z"}
+{"level":"info","message":"GET en / - 2023-09-13T23:48:36.854Z"}
+{"level":"info","message":"ENVIROMENT: Production"}
+{"level":"info","message":"Persistence: MongoDB"}
+{"level":"info","message":"DB connected to MongoDB"}
+{"level":"info","message":"Express Server listening on PORT 8080"}
+{"level":"info","message":"GET en / - 2023-09-13T23:49:36.749Z"}
+{"level":"info","message":"GET en / - 2023-09-13T23:50:05.578Z"}
+{"level":"info","message":"ENVIROMENT: Production"}
+{"level":"info","message":"Persistence: MongoDB"}
+{"level":"info","message":"DB connected to MongoDB"}
+{"level":"info","message":"Express Server listening on PORT 8080"}
+{"level":"info","message":"GET en / - 2023-09-13T23:52:57.448Z"}
+{"level":"info","message":"GET en /login - 2023-09-13T23:52:57.485Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T23:52:57.607Z"}
+{"level":"info","message":"GET en /js/login.js - 2023-09-13T23:52:57.611Z"}
+{"level":"info","message":"POST en /api/login - 2023-09-13T23:53:06.004Z"}
+{"level":"info","message":"GET en /products - 2023-09-13T23:53:06.537Z"}
+{"level":"info","message":"GET en /products/ - 2023-09-13T23:53:06.550Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-09-13T23:53:06.814Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-09-13T23:53:06.853Z"}
+{"level":"info","message":"GET en /carts/0 - 2023-09-13T23:53:07.106Z"}
+{"level":"error","message":"ReferenceError: logger is not defined"}
+{"level":"info","message":"GET en / - 2023-09-13T23:53:13.491Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T23:53:13.532Z"}
+{"level":"info","message":"GET en /js/profile.js - 2023-09-13T23:53:13.539Z"}
+{"level":"info","message":"GET en /admin/console/products/ - 2023-09-13T23:53:14.995Z"}
+{"level":"info","message":"GET en /admin/console/users/ - 2023-09-13T23:53:20.799Z"}
+{"level":"info","message":"GET en /api/logout - 2023-09-13T23:53:24.076Z"}
+{"level":"info","message":"GET en /login - 2023-09-13T23:53:24.091Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T23:53:24.139Z"}
+{"level":"info","message":"GET en /js/login.js - 2023-09-13T23:53:24.152Z"}
+{"level":"info","message":"GET en / - 2023-09-13T23:53:27.914Z"}
+{"level":"info","message":"GET en /login - 2023-09-13T23:53:27.923Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T23:53:27.969Z"}
+{"level":"info","message":"GET en /js/login.js - 2023-09-13T23:53:27.978Z"}
+{"level":"info","message":"GET en / - 2023-09-13T23:53:30.748Z"}
+{"level":"info","message":"GET en /login - 2023-09-13T23:53:30.755Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T23:53:30.804Z"}
+{"level":"info","message":"GET en /js/login.js - 2023-09-13T23:53:30.815Z"}
+{"level":"info","message":"POST en /api/login - 2023-09-13T23:53:49.569Z"}
+{"level":"info","message":"GET en /products/ - 2023-09-13T23:53:50.058Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-09-13T23:53:50.307Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-09-13T23:53:50.314Z"}
+{"level":"info","message":"GET en /carts/0 - 2023-09-13T23:53:50.334Z"}
+{"level":"error","message":"ReferenceError: logger is not defined"}
+{"level":"info","message":"POST en /carts/ - 2023-09-13T23:53:53.459Z"}
+{"level":"info","message":"POST en /carts/65024b91bf5a5f2ec956eebc/products/645c260c46c5826efed9a561 - 2023-09-13T23:53:53.642Z"}
+{"level":"info","message":"GET en /carts/65024b91bf5a5f2ec956eebc - 2023-09-13T23:53:54.793Z"}
+{"level":"info","message":"GET en /carts/style.css - 2023-09-13T23:53:55.158Z"}
+{"level":"info","message":"GET en /js/cart.js - 2023-09-13T23:53:55.160Z"}
+{"level":"info","message":"GET en /products/ - 2023-09-13T23:53:56.499Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-09-13T23:53:56.724Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-09-13T23:53:56.730Z"}
+{"level":"info","message":"GET en /carts/65024b91bf5a5f2ec956eebc - 2023-09-13T23:53:56.771Z"}
+{"level":"info","message":"GET en /carts/65024b91bf5a5f2ec956eebc - 2023-09-13T23:53:58.221Z"}
+{"level":"info","message":"GET en /carts/style.css - 2023-09-13T23:53:58.600Z"}
+{"level":"info","message":"GET en /js/cart.js - 2023-09-13T23:53:58.610Z"}
+{"level":"info","message":"DELETE en /carts/65024b91bf5a5f2ec956eebc - 2023-09-13T23:53:59.419Z"}
+{"level":"info","message":"GET en /products/ - 2023-09-13T23:54:00.533Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-09-13T23:54:00.728Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-09-13T23:54:00.731Z"}
+{"level":"info","message":"GET en /carts/65024b91bf5a5f2ec956eebc - 2023-09-13T23:54:00.805Z"}
+{"level":"info","message":"PUT en /carts/65024b91bf5a5f2ec956eebc/update/products/64617304c3f56b92a57ad937 - 2023-09-13T23:54:02.355Z"}
+{"level":"info","message":"POST en /carts/65024b91bf5a5f2ec956eebc/products/64617304c3f56b92a57ad937 - 2023-09-13T23:54:02.522Z"}
+{"level":"info","message":"GET en /carts/65024b91bf5a5f2ec956eebc - 2023-09-13T23:54:03.709Z"}
+{"level":"info","message":"GET en /carts/style.css - 2023-09-13T23:54:04.079Z"}
+{"level":"info","message":"GET en /js/cart.js - 2023-09-13T23:54:04.081Z"}
+{"level":"info","message":"GET en /products/ - 2023-09-13T23:54:05.716Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-09-13T23:54:05.921Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-09-13T23:54:05.926Z"}
+{"level":"info","message":"GET en /carts/65024b91bf5a5f2ec956eebc - 2023-09-13T23:54:05.969Z"}
+{"level":"info","message":"PUT en /carts/65024b91bf5a5f2ec956eebc/update/products/645c260c46c5826efed9a561 - 2023-09-13T23:54:08.035Z"}
+{"level":"info","message":"POST en /carts/65024b91bf5a5f2ec956eebc/products/645c260c46c5826efed9a561 - 2023-09-13T23:54:08.200Z"}
+{"level":"info","message":"GET en /carts/65024b91bf5a5f2ec956eebc - 2023-09-13T23:54:09.406Z"}
+{"level":"info","message":"GET en /carts/style.css - 2023-09-13T23:54:09.759Z"}
+{"level":"info","message":"GET en /js/cart.js - 2023-09-13T23:54:09.763Z"}
+{"level":"info","message":"DELETE en /carts/65024b91bf5a5f2ec956eebc/product/64617304c3f56b92a57ad937 - 2023-09-13T23:54:12.651Z"}
+{"level":"info","message":"POST en /carts/65024b91bf5a5f2ec956eebc/purchase - 2023-09-13T23:54:14.803Z"}
+{"level":"info","message":"GET en /carts/65024b91bf5a5f2ec956eebc - 2023-09-13T23:54:30.050Z"}
+{"level":"info","message":"GET en /carts/style.css - 2023-09-13T23:54:30.268Z"}
+{"level":"info","message":"GET en /js/cart.js - 2023-09-13T23:54:30.270Z"}
+{"level":"info","message":"GET en /products/ - 2023-09-13T23:54:31.676Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-09-13T23:54:31.896Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-09-13T23:54:31.903Z"}
+{"level":"info","message":"GET en /carts/65024b91bf5a5f2ec956eebc - 2023-09-13T23:54:31.964Z"}
+{"level":"info","message":"GET en / - 2023-09-13T23:54:40.981Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T23:54:41.018Z"}
+{"level":"info","message":"GET en /js/profile.js - 2023-09-13T23:54:41.020Z"}
+{"level":"info","message":"GET en /products/ - 2023-09-13T23:54:43.806Z"}
+{"level":"info","message":"GET en /products/style.css - 2023-09-13T23:54:44.031Z"}
+{"level":"info","message":"GET en /js/products.js - 2023-09-13T23:54:44.034Z"}
+{"level":"info","message":"GET en /carts/65024b91bf5a5f2ec956eebc - 2023-09-13T23:54:44.100Z"}
+{"level":"info","message":"GET en /api/logout - 2023-09-13T23:54:46.595Z"}
+{"level":"info","message":"GET en /login - 2023-09-13T23:54:46.609Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T23:54:46.644Z"}
+{"level":"info","message":"GET en /js/login.js - 2023-09-13T23:54:46.647Z"}
+{"level":"info","message":"GET en / - 2023-09-13T23:54:48.959Z"}
+{"level":"info","message":"GET en /login - 2023-09-13T23:54:48.969Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-13T23:54:48.999Z"}
+{"level":"info","message":"GET en /js/login.js - 2023-09-13T23:54:49.004Z"}

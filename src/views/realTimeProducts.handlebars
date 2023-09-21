@@ -1,0 +1,54 @@
+<div>
+    <h1>Products</h1>
+    <div class="box" id="products" >
+        {{#each products}}
+        <div class="product" id="product-{{this._id}}">
+            <p>Title:</p>
+            <p class="title">{{this.title}}</p>
+            <img class="image" src="{{this.thumbnails.[0]}}"></img>
+            <p>description:</p>
+            <p class="description">{{this.description}}</p>
+            <p>Price:</p>
+            <p class="price">{{this.price}}</p>
+            <p>Stock:</p>
+            <p class="stock">{{this.stock}}</p>
+        </div>
+        {{/each}}
+    </div>
+</div>
+<div class="formulario">
+          <form class="form-group"  target="noredirect" id="send">
+            title:
+            <input type="text" name="title" id="title"/>
+            description:
+            <input type="text" name="description" id="description"/>
+            Link:
+            <input type="text" name="thumbnails" id="thumbnails"/>
+            code:
+            <input type="text" name="code" id="code"/>
+            category:
+            <input type="text" name="category" id="category"/>
+            stock
+            <input type="text" name="stock" id="stock"/>
+            price:
+            <input type="text" name="price" id="price"/>
+            status:
+            <input type="checkbox" name="status" id="status" value="false" >
+            <button type="submit">Agregar</button>
+          </form>
+</div>
+<div class="formulario">
+    <form class="form-group"  target="noredirect" id="delete">
+      Eliminar ID:
+      <input type="text" name="id" id="id"/>
+<button type="submit" class="btn-delete" >Delete</button>
+    </form>
+</div>
+<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+<script src="/js/index.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+></script>

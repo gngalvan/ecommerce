@@ -1,0 +1,138 @@
+paths:
+  /products/:
+      get:
+        summary: Obtener todos los productos
+        tags:
+          - Productos
+        responses:
+          '200':
+            description: Respuesta exitosa
+          '500':
+            description: Error interno del servidor
+      post:
+        summary: Agregar un producto
+        tags:
+          - Productos
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#components/schemas/product'
+        responses:
+          '200':
+            description: Respuesta exitosa
+          '500':
+            description: Error interno del servidor
+        items:
+          $ref: '#/components/schemas/product'
+  /products/product/{id}:
+      get:
+        summary: Obtener un producto por ID
+        tags:
+          - Productos
+        parameters:
+          - name: id
+            in: path
+            required: true
+            description: ID del producto a obtener
+            schema:
+              type: string
+        responses:
+          '200':
+            description: Respuesta exitosa
+          '500':
+            description: Error interno del servidor
+  /products/{id}:
+      delete:
+        summary: Eliminar un producto por ID
+        tags:
+          - Productos
+        parameters:
+          - name: id
+            in: path
+            required: true
+            description: ID del producto a eliminar
+            schema:
+              type: string
+        responses:
+          '200':
+            description: Respuesta exitosa
+          '500':
+            description: Error interno del servidor
+      put:
+        summary: Actualizar un producto
+        tags:
+          - Productos
+        parameters:
+          - name: id
+            in: path
+            required: true
+            description: ID del producto a actualizar
+            schema:
+              type: string
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  title:
+                    type: string
+                  description:
+                    type: string
+                  code:
+                    type: string
+                  price:
+                    type: number
+                  stock:
+                    type: number
+                  category:
+                    type: string
+                  thumbnails:
+                    type: array
+                    items:
+                      type: string
+                  status:
+                    type: boolean
+        responses:
+          '200':
+            description: Respuesta exitosa
+          '500':
+            description: Error interno del servidor
+components:
+  schemas:
+    product:
+      type: object
+      properties:
+          description:
+            type: string
+          code:
+            type: string
+          price:
+            type: number
+          stock:
+            type: number
+          category:
+            type: string
+          thumbnails:
+            type: array
+            items:
+              type: string
+          status:
+            type: boolean
+  examples:
+    example:
+      value:
+        title: "Remera Adidas"
+        description: "Remera deportiva de alta calidad"
+        code: "ADIDAS014"
+        price: 35
+        stock: 4140
+        category: "Deportes"
+        thumbnails:
+          - "https://sporting.vtexassets.com/arquivos/ids/197609-1200-1200?v=637105595749470000&width=1200&height=1200&aspect=true"
+          - "ruta/imagen29.jpg"
+          - "ruta/imagen30.jpg"
