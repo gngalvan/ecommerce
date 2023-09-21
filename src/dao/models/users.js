@@ -31,11 +31,6 @@ const usersSchema = new mongoose.Schema({
         type:Date,
         default:Date.now
     }
+})
 
-
-});
-
-
-
-
-export const usersModel = mongoose.model(userscollection,usersSchema);
+export const usersModel = mongoose.model(userscollection, usersSchema);

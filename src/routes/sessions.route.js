@@ -1,10 +1,5 @@
 import Router from './router.route.js';
-import Users from "../dao/dbManagers/users.js";
 import { registerUser,login,logout ,userList,deleteUserInfrequent,deleteUser,updateUserRol,sendEmailRestartPassword,resetPassword} from '../controllers/sessionsController.js';
-
-
-// const usersManager = new Users();
-
 
 export default class SessionsRouter extends Router {
     init() {
@@ -25,7 +20,6 @@ export default class SessionsRouter extends Router {
         this.put("/user/update/password",['USER', 'ADMIN'],resetPassword )
 
         this.put("/reset-password",['PUBLIC'],sendEmailRestartPassword )
-
 
     }
 

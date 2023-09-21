@@ -8,9 +8,7 @@ import {
 export default class MessagesRouter extends Router {
     init() {
         this.get("/",['USER'], getAllMsg);
-
         this.post("/",['USER'],saveMessage );
-
     }
 
 }

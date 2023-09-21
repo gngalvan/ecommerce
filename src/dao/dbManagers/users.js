@@ -13,14 +13,12 @@ export default class Users extends ManagerDb {
     super(usersModel)
   }
 
-
   findIfExist = async (emailUser) => {
     const resultAll = await this.model.findOne({
       email: emailUser
     }).lean();
     return resultAll
   }
-
 
   LoginValidate = async (emailUser, passUser) => {
     const user = await this.model.findOne({
@@ -44,7 +42,6 @@ export default class Users extends ManagerDb {
     const userCreated = await this.model.create(newUser)
     return userCreated
   };
-
 
   findById = async (id) => {
     const user = await this.model.findById({

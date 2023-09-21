@@ -23,6 +23,6 @@ export default class ProductsRouter extends Router {
 
         this.delete("/:id",['ADMIN','PREMIUM'], deleteProduct);
 
-        this.get("/realtimeproducts", ['USER', 'ADMIN'],renderProductsRealTime);
+        this.get("/realtimeproducts", ['USER', 'ADMIN'], renderProductsRealTime);
     }
 }
