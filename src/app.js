@@ -1,30 +1,32 @@
 import express from 'express';
-import __dirname from './utils/utils.js'
+import __dirname from './utils/utils.js';
+import handlebars from 'express-handlebars';
+import compression from 'express-compression';
+import swaggerJsdoc from 'swagger-jsdoc';
+import swaggerUIexpress from 'swagger-ui-express';
+import cookieParser from 'cookie-parser';
+import passport from 'passport';
+import { Server as HTTPServer } from 'http';
+import { Server as SocketServer } from 'socket.io';
+
+import './dao/dbManagers/dbConfig.js';
+import FileManager from './dao/fileManagers/FileManager.js';
+import Products from './dao/dbManagers/products.js';
+import Messages from './dao/dbManagers/messages.js';
+import errorHandler from './middlewares/errors/index.js';
+import { addLogger, logger } from './utils/logger.js';
+
 import CartsRouter from './routes/carts.route.js';
 import messagesRouter from './routes/messages.route.js';
 import SessionsRouter from './routes/sessions.route.js';
 import SessionsViews from './routes/sessionViews.route.js';
 import ProductsRouter from './routes/products.js';
 import mockProductsRouter from './routes/mockProducts.route.js';
-import handlebars  from 'express-handlebars';
-import './dao/dbManagers/dbConfig.js'
-import FileManager from './dao/fileManagers/FileManager.js';
-import Products from './dao/dbManagers/products.js';
-import Messages from './dao/dbManagers/messages.js';
-import {Server as HTTPServer} from 'http'
-import {Server as SocketServer} from 'socket.io'
-import cookieParser from 'cookie-parser';
-import passport from 'passport';
-import passportInit from './config/passport.config.js';
-import compression from 'express-compression';
-import errorHandler from './middlewares/errors/index.js'
-import { addLogger, logger } from './utils/logger.js';
-import swaggerJsdoc from 'swagger-jsdoc';
-import swaggerUIexpress from 'swagger-ui-express';
 
 const fileManager = new FileManager("./db/products.json");
 const productsManager = new Products();
 const messagesManager = new Messages();
+
 const productsRouter = new ProductsRouter();
 const cartsRouter = new CartsRouter();
 const sessionsRouter = new SessionsRouter();
@@ -35,74 +37,86 @@ const mockingproducts = new mockProductsRouter();
 const app = express();
 const httpServer = new HTTPServer(app);
 export const socketServer = new SocketServer(httpServer);
-export  const io = socketServer; 
+export const io = socketServer;
 
+// Configuración de Swagger
 const swaggerOptions = {
-  definition:{
-    openapi:'3.0.1',
-    info:{
-      title:'Documentacion Bolka Ecommerce',
-      description:'API para un ecommerce'
-    }
+  definition: {
+    openapi: '3.0.1',
+    info: {
+      title: 'Documentacion Bolka Ecommerce',
+      description: 'API para un ecommerce',
+    },
   },
-  apis:[`${__dirname}/docs/**/*.yaml`]
-}
-
+  apis: [`${__dirname}/docs/**/*.yaml`],
+};
 const specs = swaggerJsdoc(swaggerOptions);
 app.use(addLogger);
-app.use('/api/docs',swaggerUIexpress.serve,swaggerUIexpress.setup(specs));
+app.use('/api/docs', swaggerUIexpress.serve, swaggerUIexpress.setup(specs));
 
-app.use(compression(
-  {
-    brotli:{enable:true,zlib:{}}
-  }
-))
-  
+// Compresión
+app.use(compression({
+  brotli: { enable: true, zlib: {} },
+}));
+
+// Middleware para JSON y URL-encoded
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
+
+// Servir archivos estáticos
 app.use(express.static(`${__dirname}/public`));
-app.use('/products/realtimeproducts',express.static(`${__dirname}/public`));
-app.use('/products/',express.static(`${__dirname}/public`));
-app.use('/chats',express.static(`${__dirname}/public`));
-app.use('/carts/',express.static(`${__dirname}/public`));
-app.use('/admin/console/users/',express.static(`${__dirname}/public`));
-app.use('/password-reset/',express.static(`${__dirname}/public`));
-app.use('/admin/console/products/',express.static(`${__dirname}/public`));
-app.use('/carts',cartsRouter.getRouter());
-app.use('/chat',msgRouter.getRouter());
-app.use('/mockingproducts',mockingproducts.getRouter());
+const staticRoutes = [
+  '/products/realtimeproducts',
+  '/products/',
+  '/chats',
+  '/carts/',
+  '/admin/console/users/',
+  '/password-reset/',
+  '/admin/console/products/',
+];
+staticRoutes.forEach(route => {
+  app.use(route, express.static(`${__dirname}/public`));
+});
+
+// Rutas
+app.use('/carts', cartsRouter.getRouter());
+app.use('/chat', msgRouter.getRouter());
+app.use('/mockingproducts', mockingproducts.getRouter());
 app.use('/products', productsRouter.getRouter());
-app.use('/api',sessionsRouter.getRouter());
-app.use('/',sessionsViews.getRouter());
+app.use('/api', sessionsRouter.getRouter());
+app.use('/', sessionsViews.getRouter());
+
+// Manejo de errores
 app.use(errorHandler);
-app.use(cookieParser())
+app.use(cookieParser());
 passportInit();
 app.use(passport.initialize());
 
-app.engine('handlebars',handlebars.engine());
-app.set('views',`${__dirname}/views` ); 
-app.set('view engine',`handlebars` ); 
+// Configuración de Handlebars
+app.engine('handlebars', handlebars.engine());
+app.set('views', `${__dirname}/views`);
+app.set('view engine', 'handlebars');
 
-socketServer.on('connection',async (socket) =>{
-  logger.info('socket conectado')
-  socket.emit("SEND_PRODUCTS",await productsManager.getAll())
-  socket.on("PRODUCT_ADDED",async(obj)=>{
-    obj.thumbnails= [obj.thumbnails];
-    const resultSave = await productsManager.save(obj)
-    socketServer.sockets.emit("ADD_PRODUCT",resultSave)
+// Manejo de sockets
+socketServer.on('connection', async (socket) => {
+  logger.info('socket conectado');
+  socket.emit("SEND_PRODUCTS", await productsManager.getAll());
+  socket.on("PRODUCT_ADDED", async (obj) => {
+    obj.thumbnails = [obj.thumbnails];
+    const resultSave = await productsManager.save(obj);
+    socketServer.sockets.emit("ADD_PRODUCT", resultSave);
   });
-  socket.on("PRODUCT_DELETE",async(id)=>{
+  socket.on("PRODUCT_DELETE", async (id) => {
     await productsManager.delete(id);
-    socketServer.sockets.emit("PRODUCT_DELETED",id)
+    socketServer.sockets.emit("PRODUCT_DELETED", id);
   });
-  socket.on("MESSAGE_ADDED",async(message)=>{
-  await messagesManager.save(message);
-  socketServer.sockets.emit("ADD_MESSAGE_CHAT",message)
+  socket.on("MESSAGE_ADDED", async (message) => {
+    await messagesManager.save(message);
+    socketServer.sockets.emit("ADD_MESSAGE_CHAT", message);
   });
-})
+});
 
 const PORT = process.env.PORT || 8080;
-
-httpServer.listen(PORT,()=>{
-    logger.info(`Express Server listening on PORT ${process.env.PORT || 8080}`)
-})  
+httpServer.listen(PORT, () => {
+  logger.info(`Express Server listening on PORT ${process.env.PORT || 8080}`);
+});
