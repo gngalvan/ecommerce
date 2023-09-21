@@ -48,9 +48,9 @@ const swaggerOptions = {
   apis:[`${__dirname}/docs/**/*.yaml`]
 }
 
-const specs = swaggerJsdoc(swaggerOptions)
+const specs = swaggerJsdoc(swaggerOptions);
 app.use(addLogger);
-app.use('/api/docs',swaggerUIexpress.serve,swaggerUIexpress.setup(specs))
+app.use('/api/docs',swaggerUIexpress.serve,swaggerUIexpress.setup(specs));
 
 app.use(compression(
   {
