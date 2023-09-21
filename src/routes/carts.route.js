@@ -1,4 +1,4 @@
-import Router from './router.js';
+import Router from './router.route.js';
 import Carts from "../dao/dbManagers/carts.js";
 import { findCart,createNewCart,addProductToCartById ,updateQuantityProdToCart,clearCartId,deleteProductToCartById,createNewPurchase} from '../controllers/cartsController.js';
 

@@ -205,3 +205,33 @@
 {"level":"info","message":"GET en /login - 2023-09-13T23:54:48.969Z"}
 {"level":"info","message":"GET en /style.css - 2023-09-13T23:54:48.999Z"}
 {"level":"info","message":"GET en /js/login.js - 2023-09-13T23:54:49.004Z"}
+{"level":"info","message":"ENVIROMENT: Production"}
+{"level":"info","message":"DB connected to MongoDB"}
+{"level":"info","message":"ENVIROMENT: Production"}
+{"level":"info","message":"DB connected to MongoDB"}
+{"level":"info","message":"Express Server listening on PORT 8080"}
+{"level":"info","message":"GET en / - 2023-09-21T05:30:01.286Z"}
+{"level":"info","message":"GET en /login - 2023-09-21T05:30:01.306Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-21T05:30:01.381Z"}
+{"level":"info","message":"GET en /js/login.js - 2023-09-21T05:30:01.384Z"}
+{"level":"info","message":"GET en /favicon.ico - 2023-09-21T05:30:01.477Z"}
+{"level":"info","message":"GET en /register - 2023-09-21T05:30:28.698Z"}
+{"level":"info","message":"GET en /js/register.js - 2023-09-21T05:30:28.725Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-21T05:30:28.733Z"}
+{"level":"info","message":"POST en /api/register - 2023-09-21T05:30:41.584Z"}
+{"level":"error","message":"TypeError: Cannot read properties of undefined (reading 'findIfExist')"}
+{"level":"info","message":"GET en /login - 2023-09-21T05:30:59.214Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-21T05:30:59.239Z"}
+{"level":"info","message":"GET en /js/login.js - 2023-09-21T05:30:59.250Z"}
+{"level":"info","message":"POST en /api/login - 2023-09-21T05:31:05.058Z"}
+{"level":"error","message":"TypeError: Cannot read properties of undefined (reading 'LoginValidate')"}
+{"level":"info","message":"GET en /reset-password - 2023-09-21T05:31:07.777Z"}
+{"level":"info","message":"GET en /js/resetPassword.js - 2023-09-21T05:31:07.798Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-21T05:31:07.801Z"}
+{"level":"info","message":"PUT en /api/reset-password - 2023-09-21T05:31:12.434Z"}
+{"level":"error","message":"TypeError: Cannot read properties of undefined (reading 'findIfExist')"}
+{"level":"info","message":"GET en /register - 2023-09-21T05:31:17.423Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-21T05:31:17.443Z"}
+{"level":"info","message":"GET en /js/register.js - 2023-09-21T05:31:17.446Z"}
+{"level":"info","message":"POST en /api/register - 2023-09-21T05:31:26.131Z"}
+{"level":"error","message":"TypeError: Cannot read properties of undefined (reading 'findIfExist')"}

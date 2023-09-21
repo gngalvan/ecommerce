@@ -6,6 +6,7 @@ import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerUIexpress from 'swagger-ui-express';
 import cookieParser from 'cookie-parser';
 import passport from 'passport';
+import passportInit from './config/passport.config.js';
 import { Server as HTTPServer } from 'http';
 import { Server as SocketServer } from 'socket.io';
 
@@ -20,7 +21,7 @@ import CartsRouter from './routes/carts.route.js';
 import messagesRouter from './routes/messages.route.js';
 import SessionsRouter from './routes/sessions.route.js';
 import SessionsViews from './routes/sessionViews.route.js';
-import ProductsRouter from './routes/products.js';
+import ProductsRouter from './routes/products.route.js';
 import mockProductsRouter from './routes/mockProducts.route.js';
 
 const fileManager = new FileManager("./db/products.json");

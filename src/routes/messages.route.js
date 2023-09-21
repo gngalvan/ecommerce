@@ -1,4 +1,4 @@
-import Router from './router.js';
+import Router from './router.route.js';
 import {
     saveMessage,getAllMsg
 } from '../controllers/messagesController.js';

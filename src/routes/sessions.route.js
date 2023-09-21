@@ -1,4 +1,4 @@
-import Router from './router.js';
+import Router from './router.route.js';
 import Users from "../dao/dbManagers/users.js";
 import { registerUser,login,logout ,userList,deleteUserInfrequent,deleteUser,updateUserRol,sendEmailRestartPassword,resetPassword} from '../controllers/sessionsController.js';
 

@@ -22,14 +22,3 @@ export default class UserFileManager extends FileManager{
      }
 
 }
-
-
-// LoginValidate = async (emailUser,passUser) => {
-//     const user = await this.model.findOne({email:emailUser}).lean();
-//     const resultCompare = await comparePassword(passUser,user.password)
-//     if(resultCompare){
-//       return user 
-//     }else{
-//       return 0
-//     }      
-//   }

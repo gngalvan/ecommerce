@@ -1,4 +1,4 @@
-import Router from './router.js';
+import Router from './router.route.js';
 import { authTokenResetPassword } from '../utils/utils.js';
 import {  registrer,login,profile,adminUsers,resetPasswordView,setNewPasswordReset,adminProds } from '../controllers/sessionsViewsController.js';
 

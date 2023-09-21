@@ -1,5 +1,4 @@
-import Router from './router.js';
-// import Products from "../dao/dbManagers/products.js";
+import Router from './router.route.js';
 import addProductValidator from "../middlewares/addProductValidator.js";
 import {
     getProducts,
@@ -25,8 +24,5 @@ export default class ProductsRouter extends Router {
         this.delete("/:id",['ADMIN','PREMIUM'], deleteProduct);
 
         this.get("/realtimeproducts", ['USER', 'ADMIN'],renderProductsRealTime);
-
     }
-
-
 }

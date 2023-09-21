@@ -1,4 +1,4 @@
-import Router from './router.js';
+import Router from './router.route.js';
 import { MockProducts } from '../utils/utils.js';
 import { logger } from '../utils/logger.js';
 
