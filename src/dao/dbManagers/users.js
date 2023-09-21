@@ -11,13 +11,23 @@ export default class Users extends ManagerDb {
   constructor() {
     super(usersModel)
   }
-
+  
   findIfExist = async (emailUser) => {
-    const resultAll = await this.model.findOne({
-      email: emailUser
-    }).lean();
-    return resultAll
-  }
+    try {
+      const resultAll = await this.model.findOne({
+        email: emailUser
+      }).lean();
+      
+      if (!resultAll) {
+        throw new Error(`No se encontró ningún usuario con el correo electrónico ${emailUser}`);
+      }
+      
+      return resultAll;
+    } catch (error) {
+      console.error('Error en la función findIfExist:', error);
+      throw error; // Re-lanza la excepción para que se pueda manejar en un nivel superior
+    }
+  }  
 
   LoginValidate = async (emailUser, passUser) => {
     const user = await this.model.findOne({

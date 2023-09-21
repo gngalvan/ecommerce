@@ -10,8 +10,6 @@ if(idItem){
 }
 
 }
-
-
 async function deleteUser (id){
     const rs = await fetch(`/api/user/delete/${id}`, {
         method: 'DELETE',
@@ -24,9 +22,6 @@ async function deleteUser (id){
 
     return response
 }
-
-
-
 
 async function deleteUsersInfrequent (){
     const rs = await fetch(`/api/users/`, {

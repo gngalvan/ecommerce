@@ -15,7 +15,6 @@ export default class Router {
         return this.router;
     };
 
-
     async get(path, policies, ...callbacks) {
         await this.router.get(
             path,
@@ -23,7 +22,6 @@ export default class Router {
             this.generateCustomReponse,
             ...await this.applyCallbacks(callbacks)
         );
-
     }
 
     async post(path, policies, ...callbacks) {
@@ -32,13 +30,8 @@ export default class Router {
             await this.handlePolicies(policies),
             this.generateCustomReponse,
             ...await this.applyCallbacks(callbacks)
-        );
-        
-            
-        
-      
+        );      
     }
-
 
     async put(path, policies, ...callbacks) {
         await this.router.put(

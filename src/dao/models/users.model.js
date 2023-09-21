@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const userscollection = "users";
+const usersCollection = "users";
 
 const usersSchema = new mongoose.Schema({
     
@@ -33,4 +33,4 @@ const usersSchema = new mongoose.Schema({
     }
 })
 
-export const usersModel = mongoose.model(userscollection, usersSchema);
+export const usersModel = mongoose.model(usersCollection, usersSchema);
