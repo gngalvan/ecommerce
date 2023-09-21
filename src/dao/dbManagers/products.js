@@ -1,6 +1,6 @@
 import {
     productModel
-} from "../models/products.js";
+} from "../models/products.model.js";
 import ManagerDb from "./managerDb.js";
 
 export default class Products extends ManagerDb {

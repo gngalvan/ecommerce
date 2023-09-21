@@ -1,4 +1,4 @@
-import { ticketModel } from "../models/ticket.js";
+import { ticketModel } from "../models/ticket.model.js";
 import ManagerDb from "./managerDb.js";
 
 export default class Tickets extends ManagerDb{

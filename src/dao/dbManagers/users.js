@@ -1,6 +1,6 @@
 import {
   usersModel
-} from "../models/users.js";
+} from "../models/users.model.js";
 import {
   comparePassword,
   createPasswordHash
