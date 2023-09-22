@@ -263,3 +263,16 @@
 {"level":"info","message":"GET en /js/register.js - 2023-09-21T06:08:56.827Z"}
 {"level":"info","message":"POST en /api/register - 2023-09-21T06:09:02.708Z"}
 {"level":"error","message":"TypeError: Cannot read properties of undefined (reading 'findIfExist')"}
+{"level":"info","message":"ENVIROMENT: Production"}
+{"level":"info","message":"DB connected to MongoDB"}
+{"level":"info","message":"Express Server listening on PORT 8080"}
+{"level":"info","message":"GET en / - 2023-09-22T02:42:48.516Z"}
+{"level":"info","message":"GET en /login - 2023-09-22T02:42:48.537Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-22T02:42:48.602Z"}
+{"level":"info","message":"GET en /js/login.js - 2023-09-22T02:42:48.606Z"}
+{"level":"info","message":"GET en /favicon.ico - 2023-09-22T02:42:48.664Z"}
+{"level":"info","message":"GET en /register - 2023-09-22T02:42:56.120Z"}
+{"level":"info","message":"GET en /style.css - 2023-09-22T02:42:56.149Z"}
+{"level":"info","message":"GET en /js/register.js - 2023-09-22T02:42:56.151Z"}
+{"level":"info","message":"POST en /api/register - 2023-09-22T02:43:03.536Z"}
+{"level":"error","message":"TypeError: Cannot read properties of undefined (reading 'findIfExist')"}

@@ -1,20 +1,20 @@
-<div id="profile-container">
-  <div id="profile-header" class="TitleProds">
-    <h1 id="profile-title" class="titleSection">PROFILE</h1>
-    <p id="username">username: {{user.username}}</p>
-    <p id="email">Email: {{user.email}}</p>
-    <p id="admin">Role: {{user.role}}</p>
+<div id="profile-container" style="text-align: center;">
+  <div id="profile-header" class="TitleProds" style="margin: 20px 0;">
+    <h1 id="profile-title" class="titleSection" style="font-size: 1.5em; font-weight: bold;">PROFILE</h1>
+    <p id="username" style="font-weight: bold;">username: {{user.username}}</p>
+    <p id="email" style="font-weight: bold;">Email: {{user.email}}</p>
+    <p id="admin" style="font-weight: bold;">Role: {{user.role}}</p>
   </div>
-  <nav id="profile-navigation" name="paginado">
+  <nav id="profile-navigation" name="paginado" style="margin-top: 20px;">
     <div id="back-button">
-      <button ><a href="/products">Products</a></button>
+      <button style="background-color: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer;"><a href="/products" style="text-decoration: none; color: white;">Products</a></button>
     </div>
-       <div id="back-button">
-      <button ><a href="/admin/console/users/">Admin users</a></button>
-      <button ><a href="/admin/console/products/">Admin products</a></button>
+    <div id="back-button" style="margin-top: 10px;">
+      <button style="background-color: #333; color: white; border: none; padding: 10px 20px; cursor: pointer;"><a href="/admin/console/users/" style="text-decoration: none; color: white;">Admin users</a></button>
+      <button style="background-color: #333; color: white; border: none; padding: 10px 20px; cursor: pointer;"><a href="/admin/console/products/" style="text-decoration: none; color: white;">Admin products</a></button>
     </div>
-     <div id="back-button">
-    <button id="logout" onclick="logout()" >Logout</button>
+    <div id="back-button" style="margin-top: 10px;">
+      <button id="logout" onclick="logout()" style="background-color: #dc3545; color: white; border: none; padding: 10px 20px; cursor: pointer;">Logout</button>
     </div>
   </nav>
 </div>

@@ -1,38 +1,31 @@
-<div class="chatBox" > 
+<div class="chatBox" style="color: #333;">
   <div class="chatGeneral" id="chatGeneral">
-  <h1>chat   <a href="/products" ><button class="butttonCart">Products</button></a></h1>
+    <h1>Chat <a href="/products"><button class="butttonCart" style="background-color: blue; color: white;">Products</button></a></h1>
 
-  <div class="chat" id="chat">
-    
-    {{#each messages}}
+    <div class="chat" id="chat">
+      {{#each messages}}
       <div class="message">
         <p class="title" style="color: rgb(150, 159, 245);">{{this.email}}</p>
         <p class="description">{{this.message}}</p>
         <p class="time">{{this.timestamp}}</p>
       </div>
-    {{/each}}
+      {{/each}}
+    </div>
   </div>
-</div>
-<div class="chatForm">
-  <form class="form-group" target="noredirect" id="newmessage">
-    <input type="text" name="email" id="email" placeholder="email" />
-    <input type="text" name="message" id="message" placeholder="message" autocomplete="off"/>
-    <button type="submit" class="btn-send">Enviar</button>
-  </form>
-
-</div>
+  <div class="chatForm">
+    <form class="form-group" target="noredirect" id="newmessage">
+      <input type="text" name="email" id="email" placeholder="Email" style="margin-right: 10px;" />
+      <input type="text" name="message" id="message" placeholder="Message" autocomplete="off" style="margin-right: 10px;" />
+      <button type="submit" class="btn-send" style="background-color: green; color: white;">Enviar</button>
+    </form>
+  </div>
 </div>
 
 <script>
-      let chatBox = document.getElementById("chatGeneral"); 
-  chatBox.scrollTop =chatBox.scrollHeight;
-
+  let chatBox = document.getElementById("chatGeneral");
+  chatBox.scrollTop = chatBox.scrollHeight;
 </script>
 <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 <script src="/js/chat.js"></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
-></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
-></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>

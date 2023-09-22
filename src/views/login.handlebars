@@ -1,16 +1,16 @@
-<div id="login-container">
-  <h3 id="login-title">Login</h3>
-  <form id="login">
-    <label id="email-label" for="email">Email</label>
-    <input type="text" name="email" id="email"><br>
-    <label id="password-label" for="password">Password</label>
-    <input type="password" id="password">
- <label id="panelLogin" style="color:brown" for="panel"></label>
- <br>
-    <input id="login-button" type="submit">
+<div id="login-container" style="text-align: center;">
+  <h3 id="login-title" style="font-size: 1.5em; font-weight: bold;">Login</h3>
+  <form id="login" style="margin: 20px auto; width: 80%;">
+    <label id="email-label" for="email" style="font-weight: bold;">Email</label>
+    <input type="text" name="email" id="email" style="width: 100%; padding: 5px; margin: 5px 0;"><br>
+    <label id="password-label" for="password" style="font-weight: bold;">Password</label>
+    <input type="password" id="password" style="width: 100%; padding: 5px; margin: 5px 0;">
+    <label id="panelLogin" style="color: brown; font-weight: bold; margin-top: 10px;"></label>
+    <br>
+    <input id="login-button" type="submit" style="background-color: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer;">
   </form>
-  <button hidden><a href="/api/github">Acceder con GitHub</a></button>
-  <p id="register-link">¿Aún no estás registrado? <a href="/register">Regístrate aquí</a></p>
-  <p id="register-link"><a href="/reset-password">¿Haz olvidado tu password?</a></p>
+  <button hidden><a href="/api/github" style="text-decoration: none; background-color: #333; color: white; padding: 10px 20px; border: none; display: block; margin: 20px auto; cursor: pointer;">Acceder con GitHub</a></button>
+  <p id="register-link" style="font-weight: bold;">¿Aún no estás registrado? <a href="/register" style="color: #007bff; text-decoration: none;">Regístrate aquí</a></p>
+  <p id="register-link" style="font-weight: bold;"><a href="/reset-password" style="color: #007bff; text-decoration: none;">¿Haz olvidado tu password?</a></p>
 </div>
 <script src="/js/login.js"></script>

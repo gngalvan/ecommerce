@@ -1,85 +1,81 @@
-<div>
+<div style="color: #333;">
   <div class="TitleProds">
-     <h1 class="titleSection">Cart</h1>
+    <h1 class="titleSection">Cart</h1>
   </div>
-   
-    <div>
-      <button class="deleteBtn" onclick="deleteCart()">Clear Cart</button>
-           <button onclick="buy()" class="buyButton">Buy</button>
-    </div>
-    <div class="cartView">
-       <table >
-  <tr>
-    <th  class="titleTable">Product</th>
-    <th  class="titleTable">Title</th>
-    <th class="titleTable">Price</th>
-    <th class="titleTable">Description</th>
-    <th class="titleTable">Quantity</th>
-    <th class="titleTable"> Delete</th>
-  </tr>
-</table>
-        <ul class="cards" id="cards">
-        {{#each cart.products}}
-    
-            <li class="productCart">
-                 <div>
-           <img class="imageCart" src="{{this.product.thumbnails.[0]}}"></img>
-           </div>
-            <div>
-            {{this.product.title}}
-           </div>
-            <div>
-            ${{this.product.price}}
-           </div>
-            <div>
-            {{this.product.description}}
-           </div>
-            <div class="titleTable">
-            {{this.quantity}}
-           </div>
-            <div >
-            <button class="deleteBtn" onclick="deleteItemCart(this)">X</button>
-           <div hidden id="idItem">{{this.product._id}}</div>
-           </div>
-       
-           
-           </li>
-       
-        {{/each}}
-        </ul>
-    </div>
-    <!-- modal -->
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Ticket</h2>
-    <label for="code">Code:</label>
-    <span id="code"></span>
-    <br>
-    <label for="email">Email:</label>
-    <span id="emailuser"></span>
-    <br>
-    <label for="products">Products:</label>
-     <table id="productsAcepted">
-  <tr>
-    <th  class="titleTable">Title</th>
-    <th class="titleTable">Price</th>
-    <th class="titleTable">Quantity</th>
-  </tr>
-</table>
-<hr>
- <div>
-  <label>Total:$</label>
-  <p id="totalAmount"></p>
- </div>
- <hr>
- <div>
-  <p id="panelNotificacion"></p>
- </div>
+  <div>
+    <button class="deleteBtn" onclick="deleteCart()" style="background-color: red; color: white;">Clear Cart</button>
+    <button onclick="buy()" class="buyButton" style="background-color: green; color: white;">Buy</button>
   </div>
-</div>
-    <nav name="paginado">
-        <div id="back" ><button onclick="navigateTo(/products/)">Back</button></div>
-    </nav>
+  <div class="cartView">
+    <table>
+      <tr>
+        <th class="titleTable">Product</th>
+        <th class="titleTable">Title</th>
+        <th class="titleTable">Price</th>
+        <th class="titleTable">Description</th>
+        <th class="titleTable">Quantity</th>
+        <th class="titleTable">Delete</th>
+      </tr>
+    </table>
+    <ul class="cards" id="cards">
+      {{#each cart.products}}
+      <li class="productCart">
+        <div>
+          <img class="imageCart" src="{{this.product.thumbnails.[0]}}"></img>
+        </div>
+        <div>
+          {{this.product.title}}
+        </div>
+        <div>
+          ${{this.product.price}}
+        </div>
+        <div>
+          {{this.product.description}}
+        </div>
+        <div class="titleTable">
+          {{this.quantity}}
+        </div>
+        <div>
+          <button class="deleteBtn" onclick="deleteItemCart(this)" style="background-color: red; color: white;">X</button>
+          <div hidden id="idItem">{{this.product._id}}</div>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" style="color: red;">&times;</span>
+      <h2>Ticket</h2>
+      <label for="code">Code:</label>
+      <span id="code"></span>
+      <br>
+      <label for="email">Email:</label>
+      <span id="emailuser"></span>
+      <br>
+      <label for="products">Products:</label>
+      <table id="productsAcepted">
+        <tr>
+          <th class="titleTable">Title</th>
+          <th class="titleTable">Price</th>
+          <th class="titleTable">Quantity</th>
+        </tr>
+      </table>
+      <hr>
+      <div>
+        <label>Total: $</label>
+        <p id="totalAmount"></p>
+      </div>
+      <hr>
+      <div>
+        <p id="panelNotificacion"></p>
+      </div>
+    </div>
+  </div>
+  <nav name="paginado">
+    <div id="back">
+      <button onclick="navigateTo('/products/')" style="color: #333;">Back</button>
+    </div>
+  </nav>
 </div>
 <script src="/js/cart.js"></script>

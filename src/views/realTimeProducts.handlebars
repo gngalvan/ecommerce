@@ -1,54 +1,50 @@
-<div>
+<div style="text-align: center;">
     <h1>Products</h1>
-    <div class="box" id="products" >
+    <div class="box" id="products" style="display: flex; flex-wrap: wrap; justify-content: center;">
         {{#each products}}
-        <div class="product" id="product-{{this._id}}">
+        <div class="product" id="product-{{this._id}}" style="border: 1px solid #ccc; padding: 10px; margin: 10px; text-align: left;">
             <p>Title:</p>
             <p class="title">{{this.title}}</p>
-            <img class="image" src="{{this.thumbnails.[0]}}"></img>
-            <p>description:</p>
+            <img class="image" src="{{this.thumbnails.[0]}}" style="max-width: 100%; height: auto;"></img>
+            <p>Description:</p>
             <p class="description">{{this.description}}</p>
             <p>Price:</p>
-            <p class="price">{{this.price}}</p>
+            <p class="price">${{this.price}}</p>
             <p>Stock:</p>
             <p class="stock">{{this.stock}}</p>
         </div>
         {{/each}}
     </div>
 </div>
-<div class="formulario">
-          <form class="form-group"  target="noredirect" id="send">
-            title:
-            <input type="text" name="title" id="title"/>
-            description:
-            <input type="text" name="description" id="description"/>
-            Link:
-            <input type="text" name="thumbnails" id="thumbnails"/>
-            code:
-            <input type="text" name="code" id="code"/>
-            category:
-            <input type="text" name="category" id="category"/>
-            stock
-            <input type="text" name="stock" id="stock"/>
-            price:
-            <input type="text" name="price" id="price"/>
-            status:
-            <input type="checkbox" name="status" id="status" value="false" >
-            <button type="submit">Agregar</button>
-          </form>
+<div class="formulario" style="text-align: center;">
+    <form class="form-group"  target="noredirect" id="send" style="margin-top: 20px;">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title"/><br>
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description"/><br>
+        <label for="thumbnails">Link:</label>
+        <input type="text" name="thumbnails" id="thumbnails"/><br>
+        <label for="code">Code:</label>
+        <input type="text" name="code" id="code"/><br>
+        <label for="category">Category:</label>
+        <input type="text" name="category" id="category"/><br>
+        <label for="stock">Stock:</label>
+        <input type="text" name="stock" id="stock"/><br>
+        <label for="price">Price:</label>
+        <input type="text" name="price" id="price"/><br>
+        <label for="status">Status:</label>
+        <input type="checkbox" name="status" id="status" value="false"><br>
+        <button type="submit" style="background-color: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer;">Agregar</button>
+    </form>
 </div>
-<div class="formulario">
-    <form class="form-group"  target="noredirect" id="delete">
-      Eliminar ID:
-      <input type="text" name="id" id="id"/>
-<button type="submit" class="btn-delete" >Delete</button>
+<div class="formulario" style="text-align: center;">
+    <form class="form-group"  target="noredirect" id="delete" style="margin-top: 20px;">
+        <label for="id">Eliminar ID:</label>
+        <input type="text" name="id" id="id"/><br>
+        <button type="submit" class="btn-delete" style="background-color: #dc3545; color: white; border: none; padding: 10px 20px; cursor: pointer;">Delete</button>
     </form>
 </div>
 <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
 <script src="/js/index.js"></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
-></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
-></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
