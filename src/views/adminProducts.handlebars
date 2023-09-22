@@ -1,27 +1,26 @@
 <div>
-  <div id="profile-header">
-    <h1 id="profile-title" class="titleSection">Administrador de productos</h1>
-  <nav> 
-    <div id="back-button">
-      <button><a href="/products">Products</a></button>
-    </div>
-    <div id="back-button">
-      <button id="logout" onclick="logout()">Logout</button>
-    </div>
-  </nav>
+  <div id="profile-header" style="margin: 20px;">
+    <h1 id="profile-title" class="titleSection" style="font-size: 24px;">Administrador de productos</h1>
+    <nav style="display: flex; align-items: center; margin-top: 10px;">
+      <div id="back-button" style="margin-right: 10px;">
+        <button><a href="/products" style="text-decoration: none; color: #000;">Products</a></button>
+      </div>
+      <div id="back-button">
+        <button id="logout" onclick="logout()" style="cursor: pointer;">Logout</button>
+      </div>
+    </nav>
   </div>
   <div class="cartView">
-    <table>
+    <table style="width: 100%;">
       <tr>
-        <th class="titleTable">PRODUCT</th>
-        <th class="titleTable">STOCK</th>
-        <th class="titleTable"> DELETE</th>
+        <th class="titleTable" style="text-align: left;">PRODUCT</th>
+        <th class="titleTable" style="text-align: left;">STOCK</th>
+        <th class="titleTable" style="text-align: left;">DELETE</th>
       </tr>
     </table>
-    <ul class="cards adminuser" id="cards">
+    <ul class="cards adminuser" id="cards" style="list-style: none; padding: 0;">
       {{#each products.products}}
-
-        <li class="productCart">
+        <li class="productCart" style="display: flex; justify-content: space-between; margin-bottom: 10px;">
           <div>
             {{this.title}}
           </div>
@@ -29,36 +28,52 @@
             {{this.stock}}
           </div>
           <div>
-            <button class="deleteBtn" onclick="deleteProduct(this)">X</button>
+            <button class="deleteBtn" onclick="deleteProduct(this)" style="cursor: pointer;">X</button>
             <div hidden id="idItem">{{this._id}}</div>
           </div>
         </li>
       {{/each}}
     </ul>
   </div>
-  <nav id="profile-navigation" name="paginado">
-<div class="formulario">
-          <form class="form-group"  target="noredirect" id="send">
-            title:
-            <input type="text" name="title" id="title"/>
-            description:
-            <input type="text" name="description" id="description"/>
-            Link:
-            <input type="text" name="thumbnails" id="thumbnails"/>
-            code:
-            <input type="text" name="code" id="code"/>
-            category:
-            <input type="text" name="category" id="category"/>
-            stock
-            <input type="text" name="stock" id="stock"/>
-            price:
-            <input type="text" name="price" id="price"/>
-            status:
-            <input type="checkbox" name="status" id="status" value="false" >
-            <button type="submit">Agregar</button>
-          </form>
-           <label id="panelAddProd" style="color:brown" for="panel"></label>
-</div>
-
+  <nav id="profile-navigation" name="paginado" style="margin-top: 20px;">
+    <div class="formulario" style="display: flex; flex-direction: column; align-items: flex-start;">
+      <form class="form-group" target="noredirect" id="send" style="display: flex; flex-wrap: wrap;">
+        <div style="display: flex; flex-wrap: wrap; margin-bottom: 10px;">
+          <label for="title" style="margin-right: 5px;">title:</label>
+          <input type="text" name="title" id="title" style="margin-right: 10px; padding: 5px;">
+        </div>
+        <div style="display: flex; flex-wrap: wrap; margin-bottom: 10px;">
+          <label for="description" style="margin-right: 5px;">description:</label>
+          <input type="text" name="description" id="description" style="margin-right: 10px; padding: 5px;">
+        </div>
+        <div style="display: flex; flex-wrap: wrap; margin-bottom: 10px;">
+          <label for="thumbnails" style="margin-right: 5px;">Link:</label>
+          <input type="text" name="thumbnails" id="thumbnails" style="margin-right: 10px; padding: 5px;">
+        </div>
+        <div style="display: flex; flex-wrap: wrap; margin-bottom: 10px;">
+          <label for="code" style="margin-right: 5px;">code:</label>
+          <input type="text" name="code" id="code" style="margin-right: 10px; padding: 5px;">
+        </div>
+        <div style="display: flex; flex-wrap: wrap; margin-bottom: 10px;">
+          <label for="category" style="margin-right: 5px;">category:</label>
+          <input type="text" name="category" id="category" style="margin-right: 10px; padding: 5px;">
+        </div>
+        <div style="display: flex; flex-wrap: wrap; margin-bottom: 10px;">
+          <label for="stock" style="margin-right: 5px;">stock:</label>
+          <input type="text" name="stock" id="stock" style="margin-right: 10px; padding: 5px;">
+        </div>
+        <div style="display: flex; flex-wrap: wrap; margin-bottom: 10px;">
+          <label for="price" style="margin-right: 5px;">price:</label>
+          <input type="text" name="price" id="price" style="margin-right: 10px; padding: 5px;">
+        </div>
+        <div style="display: flex; flex-wrap: wrap; margin-bottom: 10px;">
+          <label for="status" style="margin-right: 5px;">status:</label>
+          <input type="checkbox" name="status" id="status" value="false" style="margin-right: 10px;">
+        </div>
+        <button type="submit" style="padding: 5px;">Agregar</button>
+      </form>
+      <label id="panelAddProd" style="color: brown; margin-top: 10px;" for="panel"></label>
+    </div>
+  </nav>
 </div>
 <script src="/js/adminProducts.js"></script>

@@ -70,7 +70,7 @@ const resetPasswordService = async (email, password, passwordConfirm) => {
         throw new Error(`The new password cannot be the same as the current one`);
     };
     if (!passEqual) {
-        throw new Error(`The passwords don't match`);
+        throw new Error(`The passwords dont match`);
     };
     return await sessionsRepository.resetPassword(email, password);
 }
