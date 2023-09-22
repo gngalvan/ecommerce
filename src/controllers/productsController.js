@@ -1,5 +1,5 @@
 import { getAllProducts,findProductById,addProduct,updateProductById,deleteProductById } from "../service/productsService.js";
-import userDTO from "../dao/DTOs/users.dto.js";
+import userDTO from "../dao/DTO/users.dto.js";
 
 const getProducts = async (req,res) => {
     const {limit, page,sort,title,price,category,status} = req.query;

@@ -1,4 +1,4 @@
-import userDTO from "../dao/DTOs/users.dto.js"
+import userDTO from "../dao/DTO/users.dto.js"
 import Users from "../dao/dbManagers/users.js"
 import { listUsers } from "../service/sessionsServices.js"
 import { getAllProducts } from "../service/productsService.js";

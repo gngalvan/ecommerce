@@ -1,7 +1,7 @@
 import {cartsRepository,productsRepository,ticketRepository} from '../repositories/index.js';
 import {createPasswordHash} from '../utils/utils.js'
-import TicketDTO from '../dao/DTOs/ticket.dto.js';
-import PurchaseDTO from '../dao/DTOs/purchaseDTO.js';
+import TicketDTO from '../dao/DTO/ticket.dto.js';
+import PurchaseDTO from '../dao/DTO/purchaseDTO.js';
 import { sendEmail } from '../config/mailer.config.js';
 
 

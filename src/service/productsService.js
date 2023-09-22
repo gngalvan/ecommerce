@@ -1,4 +1,4 @@
-import UserNotificationDTO from '../dao/DTOs/userNotificationDTO.js';
+import UserNotificationDTO from '../dao/DTO/userNotificationDTO.js';
 import { productsRepository } from '../repositories/index.js';
 import { sendEmail } from '../config/mailer.config.js';
 

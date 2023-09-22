@@ -1,6 +1,6 @@
-import userDTO from "../dao/DTOs/users.dto.js";
-import UserNotificationDTO from '../dao/DTOs/userNotificationDTO.js';
-import ResetPasswordEmailDTO from "../dao/DTOs/resetPasswordEmailDTO.js";
+import userDTO from "../dao/DTO/users.dto.js";
+import UserNotificationDTO from '../dao/DTO/userNotificationDTO.js';
+import ResetPasswordEmailDTO from "../dao/DTO/resetPasswordEmailDTO.js";
 import { sendEmail } from '../config/mailer.config.js';
 import { sessionsRepository } from "../repositories/index.js";
 import { comparePassword, createPasswordHash, generateTokenResetPass } from "../utils/utils.js";
