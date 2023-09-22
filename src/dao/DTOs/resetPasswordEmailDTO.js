@@ -1,31 +1,31 @@
-    
-
-export default class ResetPasswordEmailDTO{
-    constructor(email,token) {
-        this.userEmail = email;
-        this.token = token;
-    }
-
-    generateContent() {   
-      return `<table><tr><th>Reset Password</th></tr>
-      <tr>
-      <td>This is a password reset email. If you have not requested it, please ignore this message</td>
-      </tr>
-      <tr>
-      <td><a href="http://localhost:8080/password-reset/${this.token}">Reset your password here</a></td>
-      </tr>
-    
-      </table>`;
-    }
-
-    getEmail(){
-      const email= {
-        from: "Ecommerce Martin Neme",
-        to: this.userEmail, 
-        subject: "Reset Password - Ecommerce Martin Neme", 
-        html:this.generateContent()
-      }
-
-      return email;
-    }
+export default class ResetPasswordEmailDTO {
+  constructor(email, token) {
+    this.userEmail = email;
+    this.token = token;
   }
+
+  // Genera el contenido del correo electrónico de restablecimiento de contraseña.
+  generateContent() {
+    return `<table>
+      <tr><th>Restablecer contraseña</th></tr>
+      <tr>
+        <td>Este es un correo electrónico de restablecimiento de contraseña. Si no lo ha solicitado, ignore este mensaje</td>
+      </tr>
+      <tr>
+        <td><a href="http://localhost:8080/password-reset/${this.token}">Restablece tu contraseña aquí</a></td>
+      </tr>
+    </table>`;
+  }
+
+  // Obtiene el objeto de correo electrónico con la información necesaria.
+  getEmail() {
+    const email = {
+      from: "Bolka",
+      to: this.userEmail,
+      subject: "Restablece tu contraseña",
+      html: this.generateContent()
+    };
+
+    return email;
+  }
+}
