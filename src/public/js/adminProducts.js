@@ -1,4 +1,4 @@
-const logout =  async () => {
+const logout = async () => {
     const rs = await fetch(`/api/logout`, {
         method: 'GET',
         headers: {
@@ -8,56 +8,54 @@ const logout =  async () => {
     });
 
     const response = await rs.json();
-    if(response.status === 'Success'){
+    if (response.status === 'Success') {
         localStorage.removeItem('cartId');
-        window.location.href='/login'
-    }else{
-        console.error(response)
+        window.location.href = '/login';
+    } else {
+        console.error(response);
     }
-
 }
 
-async function deleteProduct(element){
+// Función para eliminar un producto
+async function deleteProduct(element) {
     const user = element.closest(".productCart");
     const idItem = user.querySelector("#idItem").textContent;
-if(idItem){
-   const isDelete = await deleteProd(idItem)
-   if(isDelete){
-    user.remove();
-   }
+    if (idItem) {
+        const isDelete = await deleteProd(idItem);
+        if (isDelete) {
+            user.remove();
+        }
+    }
 }
 
-}
-
-
-async function deleteProd (id){
+// Función para enviar una solicitud de eliminación de producto
+async function deleteProd(id) {
     const rs = await fetch(`/products/${id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
             'Cookie': `${document.cookie['coderCookieToken']}`
-        }   
+        }
     });
     const response = await rs.json();
 
-    return response
+    return response;
 }
 
-
-const addProduct =document.getElementById('send');
+const addProduct = document.getElementById('send');
 const panelAddProd = document.getElementById('panelAddProd');
 
-addProduct.addEventListener('submit', async (e)=>{
+addProduct.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const title = document.getElementById('title').value;
-    const description  = document.getElementById('description').value;
+    const description = document.getElementById('description').value;
     const thumbnails = document.getElementById('thumbnails').value;
-    const code  = document.getElementById('code').value;
-    const category  = document.getElementById('category').value;
-    const stock  = document.getElementById('stock').value;
-    const price  = document.getElementById('price').value;
-    const status   = document.getElementById('status').value;
+    const code = document.getElementById('code').value;
+    const category = document.getElementById('category').value;
+    const stock = document.getElementById('stock').value;
+    const price = document.getElementById('price').value;
+    const status = document.getElementById('status').value;
 
     const productData = {
         title: title,
@@ -68,27 +66,26 @@ addProduct.addEventListener('submit', async (e)=>{
         stock: stock,
         price: price,
         status: status,
-      };
-  
+    };
+
     try {
         let addProdFetch = await fetch('/products/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(productData)
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(productData)
         });
-        
+
         let response = await addProdFetch.json();
         if (response.data != 'Producto Agregado!') {
             panelAddProd.textContent = "Error al agregar el producto";
         } else {
-          window.location.href = '/admin/console/products/';
+            window.location.href = '/admin/console/products/';
         }
-      
+
         addProduct.reset();
-      } catch (error) {
-        console.error(`Error al realizar la solicitud:", ${error}`)
-      }
-      
-})
+    } catch (error) {
+        console.error(`Error al realizar la solicitud:", ${error}`);
+    }
+});

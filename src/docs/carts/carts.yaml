@@ -19,13 +19,13 @@ paths:
         '200':
           description: Respuesta exitosa
           content:
-              application/json:
-                example:
-                  id: ObjectId('64a097220060b753f713a69s')
-                  products:
-                    - product: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
-                      quantity: 0
-                      id: "64a0bc83bd079a3644bda63a" 
+            application/json:
+              example:
+                id: "64a097220060b753f713a69s"
+                products:
+                  - product: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+                    quantity: 0
+                    id: "64a0bc83bd079a3644bda63a" 
     delete:
       summary: Eliminar un carrito por ID
       tags:
@@ -45,10 +45,10 @@ paths:
         '200':
           description: Respuesta exitosa
           content:
-              application/json:
-                example:
-                  status: "success"
-                  payload: 1
+            application/json:
+              example:
+                status: "success"
+                payload: 1
   /carts:
     post:
       summary: Crear un nuevo carrito
@@ -80,10 +80,10 @@ paths:
         '200':
           description: Respuesta exitosa
           content:
-              application/json:
-                example:
-                  status: "success"
-                  payload: "64dd9dc8fc4c86f8f7d113ad"
+            application/json:
+              example:
+                status: "success"
+                payload: "64dd9dc8fc4c86f8f7d113ad"
 
   /carts/{id}/products/{idprod}:
     post:
@@ -111,10 +111,10 @@ paths:
         '200':
           description: Respuesta exitosa
           content:
-              application/json:
-                example:
-                  status: "success"
-                  payload: 1
+            application/json:
+              example:
+                status: "success"
+                payload: 1
 
   /carts/{cid}/purchase:
     post:
@@ -136,26 +136,25 @@ paths:
         '200':
           description: Respuesta exitosa
           content:
-              application/json:
-                example:
-                  status: "success"
-                  payload:
-                    purchase:
-                      code: "$2b$10$C8WWbMGQjw2PQRFjPG5kIORZLeFImWCfnmGqQKTToJj2SsSAZfLsa"
-                      amount: 60
-                      purchaser: "martinneme@gmail.com"
-                      _id: "64dd9e2bfc4c86f8f7d113b7"
-                      purchase_datetime: "2023-08-17T04:12:27.806Z"
-                      __v: 0
-                    productsAccepted:
-                      title: "remera"
-                      price: 34
-                      quantity: 2
-                    productsRejected:
-                      title: "remera"
-                      price: 34
-                      quantity: 2
-
+            application/json:
+              example:
+                status: "success"
+                payload:
+                  purchase:
+                    code: "random-code"
+                    amount: 60
+                    purchaser: "email@example.com"
+                    _id: "64dd9e2bfc4c86f8f7d113b7"
+                    purchase_datetime: "2023-09-21T12:34:56.789Z"
+                    __v: 0
+                  productsAccepted:
+                    title: "remera"
+                    price: 34
+                    quantity: 2
+                  productsRejected:
+                    title: "remera"
+                    price: 34
+                    quantity: 2
 
   /carts/{id}/update/products/{idprod}:
     put:
@@ -192,9 +191,9 @@ paths:
         '200':
           description: Respuesta exitosa
           content:
-              application/json:
-                example:
-                  status: "success"
+            application/json:
+              example:
+                status: "success"
 
   /carts/{id}/product/{pid}:
     delete:
@@ -222,10 +221,11 @@ paths:
         '200':
           description: Respuesta exitosa
           content:
-              application/json:
-                example:
-                  status: "success"
-                  payload: 1
+            application/json:
+              example:
+                status: "success"
+                payload: 1
+
 components:
   schemas:
     ProductToCart:
@@ -239,17 +239,19 @@ components:
     cart:
       type: object
       properties:
-          _id:
+        _id:
+          type: string
+          format: uuid
+        products: 
+          type: array
+          product:
             type: string
-            format: uuid
-          products: 
-            type: array
-            product:
-              type: string
-            quantity:
-              type: number
-            id:
-              type: string
+          quantity:
+            type: number
+            description: Cantidad del producto en el carrito
+        id:
+          type: string
+          format: uuid
 
   examples:
     cart:

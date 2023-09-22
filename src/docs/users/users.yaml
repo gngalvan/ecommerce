@@ -1,3 +1,103 @@
+openapi: 3.0.0
+info:
+  title: API de Usuarios
+  description: Documentación para las rutas relacionadas con usuarios.
+  version: 1.0.0
+
 paths:
-  /api/users:
-  get:
+  /users/:
+    get:
+      summary: Obtener todos los usuarios
+      tags:
+        - Usuarios
+      responses:
+        '200':
+          description: Respuesta exitosa
+        '500':
+          description: Error interno del servidor
+    post:
+      summary: Registrar un nuevo usuario
+      tags:
+        - Usuarios
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/user'
+      responses:
+        '200':
+          description: Respuesta exitosa
+        '500':
+          description: Error interno del servidor
+  /users/{id}:
+    get:
+      summary: Obtener un usuario por ID
+      tags:
+        - Usuarios
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del usuario a obtener
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Respuesta exitosa
+        '500':
+          description: Error interno del servidor
+    put:
+      summary: Actualizar un usuario por ID
+      tags:
+        - Usuarios
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del usuario a actualizar
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/user'
+      responses:
+        '200':
+          description: Respuesta exitosa
+        '500':
+          description: Error interno del servidor
+    delete:
+      summary: Eliminar un usuario por ID
+      tags:
+        - Usuarios
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del usuario a eliminar
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Respuesta exitosa
+        '500':
+          description: Error interno del servidor
+
+components:
+  schemas:
+    user:
+      type: object
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        role:
+          type: string

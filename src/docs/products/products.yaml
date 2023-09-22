@@ -1,128 +1,128 @@
 paths:
   /products/:
-      get:
-        summary: Obtener todos los productos
-        tags:
-          - Productos
-        responses:
-          '200':
-            description: Respuesta exitosa
-          '500':
-            description: Error interno del servidor
-      post:
-        summary: Agregar un producto
-        tags:
-          - Productos
-        requestBody:
-          required: true
-          content:
-            application/json:
-              schema:
-                type: object
-                $ref: '#components/schemas/product'
-        responses:
-          '200':
-            description: Respuesta exitosa
-          '500':
-            description: Error interno del servidor
-        items:
-          $ref: '#/components/schemas/product'
+    get:
+      summary: Obtener todos los productos
+      tags:
+        - Productos
+      responses:
+        '200':
+          description: Respuesta exitosa
+        '500':
+          description: Error interno del servidor
+    post:
+      summary: Agregar un producto
+      tags:
+        - Productos
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: '#components/schemas/product'
+      responses:
+        '200':
+          description: Respuesta exitosa
+        '500':
+          description: Error interno del servidor
   /products/product/{id}:
-      get:
-        summary: Obtener un producto por ID
-        tags:
-          - Productos
-        parameters:
-          - name: id
-            in: path
-            required: true
-            description: ID del producto a obtener
-            schema:
-              type: string
-        responses:
-          '200':
-            description: Respuesta exitosa
-          '500':
-            description: Error interno del servidor
-  /products/{id}:
-      delete:
-        summary: Eliminar un producto por ID
-        tags:
-          - Productos
-        parameters:
-          - name: id
-            in: path
-            required: true
-            description: ID del producto a eliminar
-            schema:
-              type: string
-        responses:
-          '200':
-            description: Respuesta exitosa
-          '500':
-            description: Error interno del servidor
-      put:
-        summary: Actualizar un producto
-        tags:
-          - Productos
-        parameters:
-          - name: id
-            in: path
-            required: true
-            description: ID del producto a actualizar
-            schema:
-              type: string
-        requestBody:
+    get:
+      summary: Obtener un producto por ID
+      tags:
+        - Productos
+      parameters:
+        - name: id
+          in: path
           required: true
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  title:
+          description: ID del producto a obtener
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Respuesta exitosa
+        '500':
+          description: Error interno del servidor
+  /products/{id}:
+    delete:
+      summary: Eliminar un producto por ID
+      tags:
+        - Productos
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del producto a eliminar
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Respuesta exitosa
+        '500':
+          description: Error interno del servidor
+    put:
+      summary: Actualizar un producto
+      tags:
+        - Productos
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del producto a actualizar
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                description:
+                  type: string
+                code:
+                  type: string
+                price:
+                  type: number
+                stock:
+                  type: number
+                category:
+                  type: string
+                thumbnails:
+                  type: array
+                  items:
                     type: string
-                  description:
-                    type: string
-                  code:
-                    type: string
-                  price:
-                    type: number
-                  stock:
-                    type: number
-                  category:
-                    type: string
-                  thumbnails:
-                    type: array
-                    items:
-                      type: string
-                  status:
-                    type: boolean
-        responses:
-          '200':
-            description: Respuesta exitosa
-          '500':
-            description: Error interno del servidor
+                status:
+                  type: boolean
+      responses:
+        '200':
+          description: Respuesta exitosa
+        '500':
+          description: Error interno del servidor
 components:
   schemas:
     product:
       type: object
       properties:
-          description:
+        title:
+          type: string
+        description:
+          type: string
+        code:
+          type: string
+        price:
+          type: number
+        stock:
+          type: number
+        category:
+          type: string
+        thumbnails:
+          type: array
+          items:
             type: string
-          code:
-            type: string
-          price:
-            type: number
-          stock:
-            type: number
-          category:
-            type: string
-          thumbnails:
-            type: array
-            items:
-              type: string
-          status:
-            type: boolean
+        status:
+          type: boolean
   examples:
     example:
       value:
@@ -131,7 +131,7 @@ components:
         code: "EVA0001"
         price: 35
         stock: 4140
-        category: "Deportes"
+        category: "Anime"
         thumbnails:
-          - "ruta/imagen29.jpg"
-          - "ruta/imagen30.jpg"
+          - "ruta/imagen1.jpg"
+          - "ruta/imagen2.jpg"

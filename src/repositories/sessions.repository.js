@@ -1,49 +1,41 @@
-import passport from "passport";
-
-
 export default class SessionsRepository {
     constructor(Sessions) {
         this.sessions = Sessions;
     }
 
-     findUserExist = async (emailUser) =>{
-        return await  this.sessions.findIfExist(emailUser);
-    }
-    
-     validateLogin = async (emailUser,passUser) =>{
-        return await  this.sessions.LoginValidate(emailUser,passUser);
-    }
-    
-     saveUser = async (user)=> {
-        return await  this.sessions.save(user);
-    }
-    
-     findUserByID = async (id) =>{
-        return await  this.sessions.findById(id);
+    findUserExist = async (emailUser) => {
+        return await this.sessions.findIfExist(emailUser);
     }
 
-     listUsers = async() =>{
-        return await this.sessions.getAll()
-    }
-    
-
-    deleteUsersInfrequent = async() =>{
-        return await this.sessions.deleteUsersInfrequentMethod()
+    validateLogin = async (emailUser, passUser) => {
+        return await this.sessions.LoginValidate(emailUser, passUser);
     }
 
-    deleteUser = async (id) =>{
-        return await this.sessions.deleteUser(id)
+    saveUser = async (user) => {
+        return await this.sessions.save(user);
     }
 
-    deleteUser = async (id) =>{
-        return await this.sessions.deleteUser(id)
+    findUserByID = async (id) => {
+        return await this.sessions.findById(id);
     }
 
-    updateUserRol = async (id,rol)=>{
-        return await this.sessions.updateRol(id,rol)
+    listUsers = async () => {
+        return await this.sessions.getAll();
     }
 
-    resetPassword = async (email,password)=>{
-        return await this.sessions.updatePassword(email,password)
+    deleteUsersInfrequent = async () => {
+        return await this.sessions.deleteUsersInfrequentMethod();
+    }
+
+    deleteUser = async (id) => {
+        return await this.sessions.deleteUser(id);
+    }
+
+    updateUserRol = async (id, rol) => {
+        return await this.sessions.updateRol(id, rol);
+    }
+
+    resetPassword = async (email, password) => {
+        return await this.sessions.updatePassword(email, password);
     }
 }
