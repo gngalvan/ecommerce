@@ -4,9 +4,9 @@ import { logger } from "../../utils/logger.js";
 
 const URL = config.mongoUrl;
 
-try{
-await mongoose.connect(URL)
-logger.info(`DB connected to MongoDB`)
-}catch(e){
-    logger.error(`DB not connected -  FAILED ${URL}`)
+try {
+    await mongoose.connect(URL);
+    logger.info(`DB connected to MongoDB`);
+} catch (e) {
+    logger.error(`DB not connected -  FAILED ${URL}`);
 }

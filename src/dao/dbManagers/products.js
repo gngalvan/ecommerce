@@ -1,11 +1,9 @@
-import {
-    productModel
-} from "../models/products.model.js";
+import { productModel } from "../models/products.model.js";
 import ManagerDb from "./managerDb.js";
 
 export default class Products extends ManagerDb {
     constructor() {
-        super(productModel)
+        super(productModel);
     }
 
     getAll = async (limit = 10, page = 1, query = '', sortValue) => {
@@ -24,12 +22,8 @@ export default class Products extends ManagerDb {
         }
 
         if (query) {
-            filter = {
-                ...query
-            }
+            filter = { ...query };
         }
-
-        
 
         const result = await this.model.paginate(filter, options);
         const products = result.docs.map(doc => doc.toObject());
@@ -37,31 +31,28 @@ export default class Products extends ManagerDb {
         return {
             products,
             pagination: {
-              totalDocs: result.totalDocs,
-              limit: result.limit,
-              totalPages: result.totalPages,
-              page: result.page,
-              pagingCounter: result.pagingCounter,
-              hasPrevPage: result.hasPrevPage,
-              hasNextPage: result.hasNextPage,
-              prevPage: result.prevPage,
-              nextPage: result.nextPage
+                totalDocs: result.totalDocs,
+                limit: result.limit,
+                totalPages: result.totalPages,
+                page: result.page,
+                pagingCounter: result.pagingCounter,
+                hasPrevPage: result.hasPrevPage,
+                hasNextPage: result.hasNextPage,
+                prevPage: result.prevPage,
+                nextPage: result.nextPage
             }
+        };
     }
 
-}
+    reduceStock = async (idProd, quantityToReduce) => {
+        return await this.model.updateOne(
+            { _id: idProd },
+            { $inc: { stock: -quantityToReduce } }
+        );
+    }
 
-reduceStock = async (idProd,quantityToReduce) => {
-  return  await this.model.updateOne(
-        { _id: idProd },
-        { $inc: { stock: -quantityToReduce } }
-      );
-}
-
-
-findElementById = async (id) => {
-    const resultCart = await this.model.findById({_id:id}).lean();
-    return resultCart
-}
-
+    findElementById = async (id) => {
+        const resultCart = await this.model.findById({ _id: id }).lean();
+        return resultCart;
+    }
 }
