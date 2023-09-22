@@ -8,7 +8,7 @@ let Messages;
 let Tickets;
 const persistence = config.persistence;
 
-switch(persistence) {
+switch (persistence) {
     case 'MONGO':
         logger.info('Persistence: MongoDB')
         const mongoose = await import("mongoose");
@@ -20,8 +20,8 @@ switch(persistence) {
         const { default: MongoTickets } = await import('../dao/dbManagers/ticket.js');
         Products = new MongoProducts();
         Carts = new MongoCarts();
-        Sessions =new MongoSessions();
-        Messages =new MongoMessages();
+        Sessions = new MongoSessions();
+        Messages = new MongoMessages();
         Tickets = new MongoTickets();
         break;
     case 'FILE':
